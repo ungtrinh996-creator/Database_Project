@@ -1,0 +1,2055 @@
+<mxfile host="65bd71144e">
+    <diagram id="R0" name="Overview">
+        <mxGraphModel dx="221" dy="207" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="2335.2" pageHeight="1204.86" math="0" shadow="0">
+            <root>
+                <mxCell id="0" />
+                <mxCell id="1" parent="0" />
+                <mxCell id="T.SUBCONTRACTOR" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;SUBCONTRACTOR&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="124" x="1076.4" y="37.2" as="geometry" />
+                </mxCell>
+                <mxCell id="SUBCONTRACTOR.SubcontractorID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;SubcontractorID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="124" x="1076.4" y="63.2" as="geometry" />
+                </mxCell>
+                <mxCell id="T.DEPARTMENT" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;DEPARTMENT&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="145" x="499.2" y="43.4" as="geometry" />
+                </mxCell>
+                <mxCell id="DEPARTMENT.DeptID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;DeptID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="64" x="499.2" y="69.4" as="geometry" />
+                </mxCell>
+                <mxCell id="DEPARTMENT.HeadEmpID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="HeadEmpID" vertex="1">
+                    <mxGeometry height="28" width="81" x="563.2" y="69.4" as="geometry" />
+                </mxCell>
+                <mxCell id="T.PO_ITEM" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;PO_ITEM&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="240" x="1692.6" y="62" as="geometry" />
+                </mxCell>
+                <mxCell id="PO_ITEM.PO_ID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;PO_ID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="64" x="1692.6" y="88" as="geometry" />
+                </mxCell>
+                <mxCell id="PO_ITEM.LineNumber" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u style=&quot;text-decoration-style:dashed&quot;&gt;LineNumber&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="88" x="1756.6" y="88" as="geometry" />
+                </mxCell>
+                <mxCell id="PO_ITEM.MaterialID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="MaterialID" vertex="1">
+                    <mxGeometry height="28" width="88" x="1844.6" y="88" as="geometry" />
+                </mxCell>
+                <mxCell id="T.CLIENT" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;CLIENT&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="74" x="908.7" y="74.4" as="geometry" />
+                </mxCell>
+                <mxCell id="CLIENT.ClientID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;ClientID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="74" x="908.7" y="100.4" as="geometry" />
+                </mxCell>
+                <mxCell id="T.PURCHASE_ORDER" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;PURCHASE_ORDER&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="233" x="1345.5" y="164.3" as="geometry" />
+                </mxCell>
+                <mxCell id="PURCHASE_ORDER.PO_ID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;PO_ID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="64" x="1345.5" y="190.3" as="geometry" />
+                </mxCell>
+                <mxCell id="PURCHASE_ORDER.ProjectID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="ProjectID" vertex="1">
+                    <mxGeometry height="28" width="81" x="1409.5" y="190.3" as="geometry" />
+                </mxCell>
+                <mxCell id="PURCHASE_ORDER.SupplierID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="SupplierID" vertex="1">
+                    <mxGeometry height="28" width="88" x="1490.5" y="190.3" as="geometry" />
+                </mxCell>
+                <mxCell id="T.DEPENDENT" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;DEPENDENT&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="173" x="230" y="300.08" as="geometry" />
+                </mxCell>
+                <mxCell id="DEPENDENT.EmpID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;EmpID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="64" x="230" y="326.08" as="geometry" />
+                </mxCell>
+                <mxCell id="DEPENDENT.DependentName" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u style=&quot;text-decoration-style:dashed&quot;&gt;DependentName&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="109" x="294" y="326.08" as="geometry" />
+                </mxCell>
+                <mxCell id="T.EMPLOYEE" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;EMPLOYEE&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="230" x="503.1" y="300.08" as="geometry" />
+                </mxCell>
+                <mxCell id="EMPLOYEE.EmpID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;EmpID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="64" x="503.1" y="326.08" as="geometry" />
+                </mxCell>
+                <mxCell id="EMPLOYEE.DeptID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="DeptID" vertex="1">
+                    <mxGeometry height="28" width="64" x="567.1" y="326.08" as="geometry" />
+                </mxCell>
+                <mxCell id="EMPLOYEE.SupervisorID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="SupervisorID" vertex="1">
+                    <mxGeometry height="28" width="102" x="631.1" y="326.08" as="geometry" />
+                </mxCell>
+                <mxCell id="T.PROJECT" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;PROJECT&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="328" x="908.7" y="300.08" as="geometry" />
+                </mxCell>
+                <mxCell id="PROJECT.ProjectID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;ProjectID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="81" x="908.7" y="326.08" as="geometry" />
+                </mxCell>
+                <mxCell id="PROJECT.ClientID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="ClientID" vertex="1">
+                    <mxGeometry height="28" width="74" x="989.7" y="326.08" as="geometry" />
+                </mxCell>
+                <mxCell id="PROJECT.DeptID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="DeptID" vertex="1">
+                    <mxGeometry height="28" width="64" x="1063.7" y="326.08" as="geometry" />
+                </mxCell>
+                <mxCell id="PROJECT.DirectorEmpID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="DirectorEmpID" vertex="1">
+                    <mxGeometry height="28" width="109" x="1127.7" y="326.08" as="geometry" />
+                </mxCell>
+                <mxCell id="T.SUPPLIER" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;SUPPLIER&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="88" x="1560" y="375.1" as="geometry" />
+                </mxCell>
+                <mxCell id="SUPPLIER.SupplierID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;SupplierID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="88" x="1560" y="401.1" as="geometry" />
+                </mxCell>
+                <mxCell id="T.MATERIAL" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;MATERIAL&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="88" x="1692.6" y="480.1" as="geometry" />
+                </mxCell>
+                <mxCell id="MATERIAL.MaterialID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;MaterialID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="88" x="1692.6" y="506.1" as="geometry" />
+                </mxCell>
+                <mxCell id="T.PROJECT_PHASE" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;PROJECT_PHASE&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="176" x="908.7" y="502.82" as="geometry" />
+                </mxCell>
+                <mxCell id="PROJECT_PHASE.ProjectID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;ProjectID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="81" x="908.7" y="528.82" as="geometry" />
+                </mxCell>
+                <mxCell id="PROJECT_PHASE.PhaseNumber" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u style=&quot;text-decoration-style:dashed&quot;&gt;PhaseNumber&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="95" x="989.7" y="528.82" as="geometry" />
+                </mxCell>
+                <mxCell id="T.PROJECT_SITE" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;PROJECT_SITE&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="145" x="1345.5" y="558" as="geometry" />
+                </mxCell>
+                <mxCell id="PROJECT_SITE.SiteID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;SiteID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="64" x="1345.5" y="584" as="geometry" />
+                </mxCell>
+                <mxCell id="PROJECT_SITE.ProjectID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="ProjectID" vertex="1">
+                    <mxGeometry height="28" width="81" x="1409.5" y="584" as="geometry" />
+                </mxCell>
+                <mxCell id="T.TASK" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;TASK&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="240" x="600.6" y="638.6" as="geometry" />
+                </mxCell>
+                <mxCell id="TASK.TaskID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;TaskID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="64" x="600.6" y="664.6" as="geometry" />
+                </mxCell>
+                <mxCell id="TASK.ProjectID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="ProjectID" vertex="1">
+                    <mxGeometry height="28" width="81" x="664.6" y="664.6" as="geometry" />
+                </mxCell>
+                <mxCell id="TASK.PhaseNumber" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="PhaseNumber" vertex="1">
+                    <mxGeometry height="28" width="95" x="745.6" y="664.6" as="geometry" />
+                </mxCell>
+                <mxCell id="T.SAFETY_INSPECTION" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;SAFETY_INSPECTION&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="282" x="908.7" y="840.1" as="geometry" />
+                </mxCell>
+                <mxCell id="SAFETY_INSPECTION.InspectionID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;InspectionID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="102" x="908.7" y="866.1" as="geometry" />
+                </mxCell>
+                <mxCell id="SAFETY_INSPECTION.SiteID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="SiteID" vertex="1">
+                    <mxGeometry height="28" width="64" x="1010.7" y="866.1" as="geometry" />
+                </mxCell>
+                <mxCell id="SAFETY_INSPECTION.InspectorEmpID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="InspectorEmpID" vertex="1">
+                    <mxGeometry height="28" width="116" x="1074.7" y="866.1" as="geometry" />
+                </mxCell>
+                <mxCell id="T.INCIDENT_REPORT" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;INCIDENT_REPORT&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="405" x="1349.4" y="900.86" as="geometry" />
+                </mxCell>
+                <mxCell id="INCIDENT_REPORT.IncidentID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;IncidentID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="88" x="1349.4" y="926.86" as="geometry" />
+                </mxCell>
+                <mxCell id="INCIDENT_REPORT.SiteID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="SiteID" vertex="1">
+                    <mxGeometry height="28" width="64" x="1437.4" y="926.86" as="geometry" />
+                </mxCell>
+                <mxCell id="INCIDENT_REPORT.InvolvedEmpID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="InvolvedEmpID" vertex="1">
+                    <mxGeometry height="28" width="109" x="1501.4" y="926.86" as="geometry" />
+                </mxCell>
+                <mxCell id="INCIDENT_REPORT.DamagedEquipmentID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="DamagedEquipmentID" vertex="1">
+                    <mxGeometry height="28" width="144" x="1610.4" y="926.86" as="geometry" />
+                </mxCell>
+                <mxCell id="T.EQUIPMENT" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffe6cc;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;EQUIPMENT&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="95" x="1692.6" y="1005.86" as="geometry" />
+                </mxCell>
+                <mxCell id="EQUIPMENT.EquipmentID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;EquipmentID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="95" x="1692.6" y="1031.86" as="geometry" />
+                </mxCell>
+                <mxCell id="T.MAINTENANCE_RECORD" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffe6cc;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;MAINTENANCE_RECORD&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="197" x="2098.2" y="901.48" as="geometry" />
+                </mxCell>
+                <mxCell id="MAINTENANCE_RECORD.EquipmentID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;EquipmentID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="95" x="2098.2" y="927.48" as="geometry" />
+                </mxCell>
+                <mxCell id="MAINTENANCE_RECORD.RecordNumber" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u style=&quot;text-decoration-style:dashed&quot;&gt;RecordNumber&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="102" x="2193.2" y="927.48" as="geometry" />
+                </mxCell>
+                <mxCell id="T.CLIENT_PHONE" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;CLIENT_PHONE&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="176" x="908.7" y="179.4" as="geometry" />
+                </mxCell>
+                <mxCell id="CLIENT_PHONE.ClientID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;ClientID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="74" x="908.7" y="205.4" as="geometry" />
+                </mxCell>
+                <mxCell id="CLIENT_PHONE.ContactPhone" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;ContactPhone&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="102" x="982.7" y="205.4" as="geometry" />
+                </mxCell>
+                <mxCell id="T.EMPLOYEE_PHONE" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;EMPLOYEE_PHONE&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="159" x="503.1" y="405.08" as="geometry" />
+                </mxCell>
+                <mxCell id="EMPLOYEE_PHONE.EmpID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;EmpID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="64" x="503.1" y="431.08" as="geometry" />
+                </mxCell>
+                <mxCell id="EMPLOYEE_PHONE.PhoneNumber" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;PhoneNumber&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="95" x="567.1" y="431.08" as="geometry" />
+                </mxCell>
+                <mxCell id="T.EMPLOYEE_CERTIFICATION" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;EMPLOYEE_CERTIFICATION&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="196" x="843.1" y="945.1" as="geometry" />
+                </mxCell>
+                <mxCell id="EMPLOYEE_CERTIFICATION.EmpID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;EmpID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="64" x="843.1" y="971.1" as="geometry" />
+                </mxCell>
+                <mxCell id="EMPLOYEE_CERTIFICATION.Certification" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;Certification&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="132" x="907.1" y="971.1" as="geometry" />
+                </mxCell>
+                <mxCell id="T.SUPPLIER_PHONE" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;SUPPLIER_PHONE&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="190" x="1560" y="585.1" as="geometry" />
+                </mxCell>
+                <mxCell id="SUPPLIER_PHONE.SupplierID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;SupplierID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="88" x="1560" y="611.1" as="geometry" />
+                </mxCell>
+                <mxCell id="SUPPLIER_PHONE.ContactPhone" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;ContactPhone&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="102" x="1648" y="611.1" as="geometry" />
+                </mxCell>
+                <mxCell id="T.SUPPLIER_CATEGORY" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;SUPPLIER_CATEGORY&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="204" x="1900" y="475.1" as="geometry" />
+                </mxCell>
+                <mxCell id="SUPPLIER_CATEGORY.SupplierID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;SupplierID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="88" x="1900" y="501.1" as="geometry" />
+                </mxCell>
+                <mxCell id="SUPPLIER_CATEGORY.SupplyCategory" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;SupplyCategory&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="116" x="1988" y="501.1" as="geometry" />
+                </mxCell>
+                <mxCell id="T.DELIVERY_DISPATCH" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;DELIVERY_DISPATCH&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="529" x="1532.7" y="690.1" as="geometry" />
+                </mxCell>
+                <mxCell id="DELIVERY_DISPATCH.DeliveryCode" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;DeliveryCode&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="102" x="1532.7" y="716.1" as="geometry" />
+                </mxCell>
+                <mxCell id="DELIVERY_DISPATCH.SupplierID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="SupplierID" vertex="1">
+                    <mxGeometry height="28" width="88" x="1634.7" y="716.1" as="geometry" />
+                </mxCell>
+                <mxCell id="DELIVERY_DISPATCH.MaterialID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="MaterialID" vertex="1">
+                    <mxGeometry height="28" width="88" x="1722.7" y="716.1" as="geometry" />
+                </mxCell>
+                <mxCell id="DELIVERY_DISPATCH.SiteID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="SiteID" vertex="1">
+                    <mxGeometry height="28" width="64" x="1810.7" y="716.1" as="geometry" />
+                </mxCell>
+                <mxCell id="DELIVERY_DISPATCH.ReceivedByEmpID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="ReceivedByEmpID" vertex="1">
+                    <mxGeometry height="28" width="123" x="1874.7" y="716.1" as="geometry" />
+                </mxCell>
+                <mxCell id="DELIVERY_DISPATCH.PO_ID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="PO_ID" vertex="1">
+                    <mxGeometry height="28" width="64" x="1997.7" y="716.1" as="geometry" />
+                </mxCell>
+                <mxCell id="T.WORKS_ON_TASK" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;WORKS_ON_TASK&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="128" x="551.85" y="743.6" as="geometry" />
+                </mxCell>
+                <mxCell id="WORKS_ON_TASK.EmpID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;EmpID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="64" x="551.85" y="769.6" as="geometry" />
+                </mxCell>
+                <mxCell id="WORKS_ON_TASK.TaskID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;TaskID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="64" x="615.85" y="769.6" as="geometry" />
+                </mxCell>
+                <mxCell id="T.SITE_INVENTORY" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;SITE_INVENTORY&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="152" x="1519.05" y="795.1" as="geometry" />
+                </mxCell>
+                <mxCell id="SITE_INVENTORY.SiteID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;SiteID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="64" x="1519.05" y="821.1" as="geometry" />
+                </mxCell>
+                <mxCell id="SITE_INVENTORY.MaterialID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;MaterialID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="88" x="1583.05" y="821.1" as="geometry" />
+                </mxCell>
+                <mxCell id="T.MATERIAL_USAGE" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;MATERIAL_USAGE&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="297" x="1212.9" y="1005.86" as="geometry" />
+                </mxCell>
+                <mxCell id="MATERIAL_USAGE.TaskID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;TaskID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="64" x="1212.9" y="1031.86" as="geometry" />
+                </mxCell>
+                <mxCell id="MATERIAL_USAGE.MaterialID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;MaterialID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="88" x="1276.9" y="1031.86" as="geometry" />
+                </mxCell>
+                <mxCell id="MATERIAL_USAGE.SiteID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;SiteID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="64" x="1364.9" y="1031.86" as="geometry" />
+                </mxCell>
+                <mxCell id="MATERIAL_USAGE.UsageDate" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;UsageDate&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="81" x="1428.9" y="1031.86" as="geometry" />
+                </mxCell>
+                <mxCell id="T.PRECEDES" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;PRECEDES&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="260" x="600.6" y="1050.1" as="geometry" />
+                </mxCell>
+                <mxCell id="PRECEDES.PredecessorTaskID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;PredecessorTaskID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="137" x="600.6" y="1076.1" as="geometry" />
+                </mxCell>
+                <mxCell id="PRECEDES.SuccessorTaskID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;SuccessorTaskID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="123" x="737.6" y="1076.1" as="geometry" />
+                </mxCell>
+                <mxCell id="T.EQUIPMENT_DEPLOYMENT" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffe6cc;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;EQUIPMENT_DEPLOYMENT&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="419" x="1519.05" y="1110.86" as="geometry" />
+                </mxCell>
+                <mxCell id="EQUIPMENT_DEPLOYMENT.EquipmentID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;EquipmentID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="95" x="1519.05" y="1136.86" as="geometry" />
+                </mxCell>
+                <mxCell id="EQUIPMENT_DEPLOYMENT.SiteID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;SiteID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="64" x="1614.05" y="1136.86" as="geometry" />
+                </mxCell>
+                <mxCell id="EQUIPMENT_DEPLOYMENT.DeploymentStartDate" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;DeploymentStartDate&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="151" x="1678.05" y="1136.86" as="geometry" />
+                </mxCell>
+                <mxCell id="EQUIPMENT_DEPLOYMENT.OperatorEmpID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="OperatorEmpID" vertex="1">
+                    <mxGeometry height="28" width="109" x="1829.05" y="1136.86" as="geometry" />
+                </mxCell>
+                <mxCell id="e1" edge="1" parent="1" source="DEPARTMENT.HeadEmpID" style="exitX=0.417;exitY=1;exitDx=0;exitDy=0;entryX=0.686;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#6c8ebf;fontSize=10;" target="EMPLOYEE.EmpID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="597" y="107" />
+                            <mxPoint x="597" y="277" />
+                            <mxPoint x="467" y="277" />
+                            <mxPoint x="467" y="377" />
+                            <mxPoint x="547" y="377" />
+                            <mxPoint x="547" y="357" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e2" edge="1" parent="1" source="EMPLOYEE.DeptID" style="exitX=0.467;exitY=1;exitDx=0;exitDy=0;entryX=0.434;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#6c8ebf;fontSize=10;" target="DEPARTMENT.DeptID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="597" y="357" />
+                            <mxPoint x="597" y="387" />
+                            <mxPoint x="457" y="387" />
+                            <mxPoint x="457" y="107" />
+                            <mxPoint x="527" y="107" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e3" edge="1" parent="1" source="EMPLOYEE.SupervisorID" style="exitX=0.450;exitY=1;exitDx=0;exitDy=0;entryX=0.373;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#6c8ebf;fontSize=10;" target="EMPLOYEE.EmpID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="677" y="357" />
+                            <mxPoint x="677" y="367" />
+                            <mxPoint x="527" y="367" />
+                            <mxPoint x="527" y="357" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e4" edge="1" parent="1" source="EMPLOYEE_PHONE.EmpID" style="exitX=0.373;exitY=1;exitDx=0;exitDy=0;entryX=0.061;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#6c8ebf;fontSize=10;" target="EMPLOYEE.EmpID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="527" y="467" />
+                            <mxPoint x="527" y="477" />
+                            <mxPoint x="477" y="477" />
+                            <mxPoint x="477" y="367" />
+                            <mxPoint x="507" y="367" />
+                            <mxPoint x="507" y="357" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e5" edge="1" parent="1" source="EMPLOYEE_CERTIFICATION.EmpID" style="exitX=0.373;exitY=1;exitDx=0;exitDy=0;entryX=0.373;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#6c8ebf;fontSize=10;" target="EMPLOYEE.EmpID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="867" y="1007" />
+                            <mxPoint x="867" y="1017" />
+                            <mxPoint x="447" y="1017" />
+                            <mxPoint x="447" y="367" />
+                            <mxPoint x="527" y="367" />
+                            <mxPoint x="527" y="357" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e6" edge="1" parent="1" source="DEPENDENT.EmpID" style="exitX=0.461;exitY=1;exitDx=0;exitDy=0;entryX=0.061;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#6c8ebf;fontSize=10;" target="EMPLOYEE.EmpID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="259.5" y="367" />
+                            <mxPoint x="507" y="367" />
+                            <mxPoint x="507" y="357" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e7" edge="1" parent="1" source="CLIENT_PHONE.ClientID" style="exitX=0.382;exitY=1;exitDx=0;exitDy=0;entryX=0.382;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#82b366;fontSize=10;" target="CLIENT.ClientID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="937" y="237" />
+                            <mxPoint x="937" y="247" />
+                            <mxPoint x="887" y="247" />
+                            <mxPoint x="887" y="137" />
+                            <mxPoint x="937" y="137" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e8" edge="1" parent="1" source="PROJECT.ClientID" style="exitX=0.369;exitY=1;exitDx=0;exitDy=0;entryX=0.112;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#82b366;fontSize=10;" target="CLIENT.ClientID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1017" y="357" />
+                            <mxPoint x="1017" y="377" />
+                            <mxPoint x="877" y="377" />
+                            <mxPoint x="877" y="147" />
+                            <mxPoint x="917" y="147" />
+                            <mxPoint x="917" y="137" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e9" edge="1" parent="1" source="PROJECT.DeptID" style="exitX=0.364;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#82b366;fontSize=10;" target="DEPARTMENT.DeptID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1087" y="357" />
+                            <mxPoint x="1087" y="407" />
+                            <mxPoint x="747" y="407" />
+                            <mxPoint x="747" y="120" />
+                            <mxPoint x="547.2" y="120" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e10" edge="1" parent="1" source="PROJECT.DirectorEmpID" style="exitX=0.452;exitY=1;exitDx=0;exitDy=0;entryX=0.842;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#82b366;fontSize=10;" target="EMPLOYEE.EmpID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1177" y="357" />
+                            <mxPoint x="1177" y="397" />
+                            <mxPoint x="677" y="397" />
+                            <mxPoint x="677" y="377" />
+                            <mxPoint x="557" y="377" />
+                            <mxPoint x="557" y="357" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e11" edge="1" parent="1" source="PROJECT_SITE.ProjectID" style="exitX=0.463;exitY=1;exitDx=0;exitDy=0;entryX=-0.021;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#82b366;fontSize=10;" target="PROJECT.ProjectID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1447" y="617" />
+                            <mxPoint x="1447" y="647" />
+                            <mxPoint x="1207" y="647" />
+                            <mxPoint x="1207" y="417" />
+                            <mxPoint x="907" y="417" />
+                            <mxPoint x="907" y="357" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e12" edge="1" parent="1" source="PROJECT_PHASE.ProjectID" style="exitX=0.473;exitY=1;exitDx=0;exitDy=0;entryX=0.473;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#82b366;fontSize=10;" target="PROJECT.ProjectID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="947" y="557" />
+                            <mxPoint x="947" y="567" />
+                            <mxPoint x="887" y="567" />
+                            <mxPoint x="887" y="367" />
+                            <mxPoint x="947" y="367" />
+                            <mxPoint x="947" y="357" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e13" edge="1" parent="1" source="TASK.ProjectID" style="exitX=0.400;exitY=1;exitDx=0;exitDy=0;entryX=0.226;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#82b366;fontSize=10;" target="PROJECT_PHASE.ProjectID" value="(ProjectID, PhaseNumber)">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="697" y="697" />
+                            <mxPoint x="697" y="707" />
+                            <mxPoint x="927" y="707" />
+                            <mxPoint x="927" y="557" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e14" edge="1" parent="1" source="PRECEDES.PredecessorTaskID" style="exitX=0.485;exitY=1;exitDx=0;exitDy=0;entryX=0.100;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#82b366;fontSize=10;" target="TASK.TaskID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="667" y="1107" />
+                            <mxPoint x="667" y="1117" />
+                            <mxPoint x="527" y="1117" />
+                            <mxPoint x="527" y="707" />
+                            <mxPoint x="607" y="707" />
+                            <mxPoint x="607" y="697" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e15" edge="1" parent="1" source="PRECEDES.SuccessorTaskID" style="exitX=0.483;exitY=1;exitDx=0;exitDy=0;entryX=0.725;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#82b366;fontSize=10;" target="TASK.TaskID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="797" y="1107" />
+                            <mxPoint x="797" y="1127" />
+                            <mxPoint x="517" y="1127" />
+                            <mxPoint x="517" y="717" />
+                            <mxPoint x="647" y="717" />
+                            <mxPoint x="647" y="697" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e16" edge="1" parent="1" source="WORKS_ON_TASK.EmpID" style="exitX=0.393;exitY=1;exitDx=0;exitDy=0;entryX=0.061;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#82b366;fontSize=10;" target="EMPLOYEE.EmpID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="577" y="807" />
+                            <mxPoint x="467" y="807" />
+                            <mxPoint x="467" y="367" />
+                            <mxPoint x="507" y="367" />
+                            <mxPoint x="507" y="357" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e17" edge="1" parent="1" source="WORKS_ON_TASK.TaskID" style="exitX=0.487;exitY=1;exitDx=0;exitDy=0;entryX=0.412;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#82b366;fontSize=10;" target="TASK.TaskID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="647" y="807" />
+                            <mxPoint x="697" y="807" />
+                            <mxPoint x="697" y="707" />
+                            <mxPoint x="627" y="707" />
+                            <mxPoint x="627" y="697" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e18" edge="1" parent="1" source="MAINTENANCE_RECORD.EquipmentID" style="exitX=0.408;exitY=1;exitDx=0;exitDy=0;entryX=0.678;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#d79b00;fontSize=10;" target="EQUIPMENT.EquipmentID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="2137" y="957" />
+                            <mxPoint x="2137" y="1077" />
+                            <mxPoint x="1757" y="1077" />
+                            <mxPoint x="1757" y="1067" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e19" edge="1" parent="1" source="EQUIPMENT_DEPLOYMENT.EquipmentID" style="exitX=0.399;exitY=1;exitDx=0;exitDy=0;entryX=0.467;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#d79b00;fontSize=10;" target="EQUIPMENT.EquipmentID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1557" y="1167" />
+                            <mxPoint x="1557" y="1177" />
+                            <mxPoint x="1497" y="1177" />
+                            <mxPoint x="1497" y="1077" />
+                            <mxPoint x="1737" y="1077" />
+                            <mxPoint x="1737" y="1067" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e20" edge="1" parent="1" source="EQUIPMENT_DEPLOYMENT.SiteID" style="exitX=0.359;exitY=1;exitDx=0;exitDy=0;entryX=0.023;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#d79b00;fontSize=10;" target="PROJECT_SITE.SiteID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1637" y="1167" />
+                            <mxPoint x="1637" y="1187" />
+                            <mxPoint x="1487" y="1187" />
+                            <mxPoint x="1487" y="1087" />
+                            <mxPoint x="1527" y="1087" />
+                            <mxPoint x="1527" y="977" />
+                            <mxPoint x="1317" y="977" />
+                            <mxPoint x="1317" y="877" />
+                            <mxPoint x="1347" y="877" />
+                            <mxPoint x="1347" y="617" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e21" edge="1" parent="1" source="EQUIPMENT_DEPLOYMENT.OperatorEmpID" style="exitX=0.440;exitY=1;exitDx=0;exitDy=0;entryX=0.061;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#d79b00;fontSize=10;" target="EMPLOYEE.EmpID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1877" y="1167" />
+                            <mxPoint x="1877" y="1197" />
+                            <mxPoint x="427" y="1197" />
+                            <mxPoint x="427" y="367" />
+                            <mxPoint x="507" y="367" />
+                            <mxPoint x="507" y="357" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e22" edge="1" parent="1" source="SUPPLIER_PHONE.SupplierID" style="exitX=0.420;exitY=1;exitDx=0;exitDy=0;entryX=0.420;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#9673a6;fontSize=10;" target="SUPPLIER.SupplierID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1597" y="647" />
+                            <mxPoint x="1597" y="657" />
+                            <mxPoint x="1537" y="657" />
+                            <mxPoint x="1537" y="447" />
+                            <mxPoint x="1597" y="447" />
+                            <mxPoint x="1597" y="437" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e23" edge="1" parent="1" source="SUPPLIER_CATEGORY.SupplierID" style="exitX=0.420;exitY=1;exitDx=0;exitDy=0;entryX=-0.034;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#9673a6;fontSize=10;" target="SUPPLIER.SupplierID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1937" y="537" />
+                            <mxPoint x="1937" y="567" />
+                            <mxPoint x="1557" y="567" />
+                            <mxPoint x="1557" y="437" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e24" edge="1" parent="1" source="PURCHASE_ORDER.ProjectID" style="exitX=0.463;exitY=1;exitDx=0;exitDy=0;entryX=0.720;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#9673a6;fontSize=10;" target="PROJECT.ProjectID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1447" y="227" />
+                            <mxPoint x="1447" y="367" />
+                            <mxPoint x="967" y="367" />
+                            <mxPoint x="967" y="357" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e25" edge="1" parent="1" source="PURCHASE_ORDER.SupplierID" style="exitX=0.415;exitY=1;exitDx=0;exitDy=0;entryX=0.648;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#9673a6;fontSize=10;" target="SUPPLIER.SupplierID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1527" y="227" />
+                            <mxPoint x="1527" y="467" />
+                            <mxPoint x="1617" y="467" />
+                            <mxPoint x="1617" y="437" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e26" edge="1" parent="1" source="PO_ITEM.PO_ID" style="exitX=0.381;exitY=1;exitDx=0;exitDy=0;entryX=0.492;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#9673a6;fontSize=10;" target="PURCHASE_ORDER.PO_ID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1717" y="117" />
+                            <mxPoint x="1717" y="227" />
+                            <mxPoint x="1377" y="227" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e27" edge="1" parent="1" source="PO_ITEM.MaterialID" style="exitX=0.482;exitY=1;exitDx=0;exitDy=0;entryX=0.164;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#9673a6;fontSize=10;" target="MATERIAL.MaterialID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1887" y="117" />
+                            <mxPoint x="1887" y="457" />
+                            <mxPoint x="1797" y="457" />
+                            <mxPoint x="1797" y="557" />
+                            <mxPoint x="1707" y="557" />
+                            <mxPoint x="1707" y="537" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e28" edge="1" parent="1" source="SITE_INVENTORY.SiteID" style="exitX=0.437;exitY=1;exitDx=0;exitDy=0;entryX=0.805;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#9673a6;fontSize=10;" target="PROJECT_SITE.SiteID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1547" y="857" />
+                            <mxPoint x="1547" y="867" />
+                            <mxPoint x="1397" y="867" />
+                            <mxPoint x="1397" y="617" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e29" edge="1" parent="1" source="SITE_INVENTORY.MaterialID" style="exitX=0.499;exitY=1;exitDx=0;exitDy=0;entryX=0.618;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#9673a6;fontSize=10;" target="MATERIAL.MaterialID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1627" y="857" />
+                            <mxPoint x="1627" y="877" />
+                            <mxPoint x="1497" y="877" />
+                            <mxPoint x="1497" y="627" />
+                            <mxPoint x="1527" y="627" />
+                            <mxPoint x="1527" y="547" />
+                            <mxPoint x="1747" y="547" />
+                            <mxPoint x="1747" y="537" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e30" edge="1" parent="1" source="DELIVERY_DISPATCH.SupplierID" style="exitX=0.481;exitY=1;exitDx=0;exitDy=0;entryX=0.193;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#9673a6;fontSize=10;" target="SUPPLIER.SupplierID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1677" y="747" />
+                            <mxPoint x="1677" y="767" />
+                            <mxPoint x="1507" y="767" />
+                            <mxPoint x="1507" y="457" />
+                            <mxPoint x="1577" y="457" />
+                            <mxPoint x="1577" y="437" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e31" edge="1" parent="1" source="DELIVERY_DISPATCH.MaterialID" style="exitX=0.390;exitY=1;exitDx=0;exitDy=0;entryX=0.391;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#9673a6;fontSize=10;" target="MATERIAL.MaterialID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1757" y="747" />
+                            <mxPoint x="1757" y="767" />
+                            <mxPoint x="2077" y="767" />
+                            <mxPoint x="2077" y="547" />
+                            <mxPoint x="1727" y="547" />
+                            <mxPoint x="1727" y="537" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e32" edge="1" parent="1" source="DELIVERY_DISPATCH.SiteID" style="exitX=0.411;exitY=1;exitDx=0;exitDy=0;entryX=0.492;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#9673a6;fontSize=10;" target="PROJECT_SITE.SiteID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1837" y="747" />
+                            <mxPoint x="1837" y="757" />
+                            <mxPoint x="1377" y="757" />
+                            <mxPoint x="1377" y="617" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e33" edge="1" parent="1" source="DELIVERY_DISPATCH.ReceivedByEmpID" style="exitX=0.425;exitY=1;exitDx=0;exitDy=0;entryX=0.061;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#9673a6;fontSize=10;" target="EMPLOYEE.EmpID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1927" y="747" />
+                            <mxPoint x="1927" y="777" />
+                            <mxPoint x="867" y="777" />
+                            <mxPoint x="867" y="487" />
+                            <mxPoint x="457" y="487" />
+                            <mxPoint x="457" y="367" />
+                            <mxPoint x="507" y="367" />
+                            <mxPoint x="507" y="357" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e34" edge="1" parent="1" source="DELIVERY_DISPATCH.PO_ID" style="exitX=0.458;exitY=1;exitDx=0;exitDy=0;entryX=0.180;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#9673a6;fontSize=10;" target="PURCHASE_ORDER.PO_ID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="2027" y="747" />
+                            <mxPoint x="2027" y="757" />
+                            <mxPoint x="2117" y="757" />
+                            <mxPoint x="2117" y="237" />
+                            <mxPoint x="1357" y="237" />
+                            <mxPoint x="1357" y="227" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e35" edge="1" parent="1" source="MATERIAL_USAGE.TaskID" style="exitX=0.377;exitY=1;exitDx=0;exitDy=0;entryX=-0.056;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#9673a6;fontSize=10;" target="TASK.TaskID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1237" y="1067" />
+                            <mxPoint x="1237" y="1087" />
+                            <mxPoint x="1057" y="1087" />
+                            <mxPoint x="1057" y="927" />
+                            <mxPoint x="707" y="927" />
+                            <mxPoint x="707" y="717" />
+                            <mxPoint x="597" y="717" />
+                            <mxPoint x="597" y="697" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e36" edge="1" parent="1" source="MATERIAL_USAGE.MaterialID" style="exitX=0.456;exitY=1;exitDx=0;exitDy=0;entryX=0.050;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#9673a6;fontSize=10;" target="MATERIAL.MaterialID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1317" y="1067" />
+                            <mxPoint x="1317" y="1097" />
+                            <mxPoint x="1177" y="1097" />
+                            <mxPoint x="1177" y="927" />
+                            <mxPoint x="1297" y="927" />
+                            <mxPoint x="1297" y="537" />
+                            <mxPoint x="1667" y="537" />
+                            <mxPoint x="1667" y="557" />
+                            <mxPoint x="1697" y="557" />
+                            <mxPoint x="1697" y="537" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e37" edge="1" parent="1" source="MATERIAL_USAGE.SiteID" style="exitX=0.345;exitY=1;exitDx=0;exitDy=0;entryX=0.023;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#9673a6;fontSize=10;" target="PROJECT_SITE.SiteID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1387" y="1067" />
+                            <mxPoint x="1387" y="1077" />
+                            <mxPoint x="1187" y="1077" />
+                            <mxPoint x="1187" y="907" />
+                            <mxPoint x="1317" y="907" />
+                            <mxPoint x="1317" y="637" />
+                            <mxPoint x="1347" y="637" />
+                            <mxPoint x="1347" y="617" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e40" edge="1" parent="1" source="SAFETY_INSPECTION.SiteID" style="exitX=0.411;exitY=1;exitDx=0;exitDy=0;entryX=0.805;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#b85450;fontSize=10;" target="PROJECT_SITE.SiteID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1037" y="897" />
+                            <mxPoint x="1037" y="917" />
+                            <mxPoint x="1307" y="917" />
+                            <mxPoint x="1307" y="627" />
+                            <mxPoint x="1397" y="627" />
+                            <mxPoint x="1397" y="617" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e41" edge="1" parent="1" source="SAFETY_INSPECTION.InspectorEmpID" style="exitX=0.451;exitY=1;exitDx=0;exitDy=0;entryX=0.842;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#b85450;fontSize=10;" target="EMPLOYEE.EmpID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1127" y="897" />
+                            <mxPoint x="1127" y="907" />
+                            <mxPoint x="857" y="907" />
+                            <mxPoint x="857" y="387" />
+                            <mxPoint x="557" y="387" />
+                            <mxPoint x="557" y="357" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e42" edge="1" parent="1" source="INCIDENT_REPORT.SiteID" style="exitX=0.462;exitY=1;exitDx=0;exitDy=0;entryX=0.180;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#b85450;fontSize=10;" target="PROJECT_SITE.SiteID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1467" y="957" />
+                            <mxPoint x="1467" y="967" />
+                            <mxPoint x="1327" y="967" />
+                            <mxPoint x="1327" y="627" />
+                            <mxPoint x="1357" y="627" />
+                            <mxPoint x="1357" y="617" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e43" edge="1" parent="1" source="INCIDENT_REPORT.InvolvedEmpID" style="exitX=0.418;exitY=1;exitDx=0;exitDy=0;entryX=0.686;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#b85450;fontSize=10;" target="EMPLOYEE.EmpID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1547" y="957" />
+                            <mxPoint x="1547" y="987" />
+                            <mxPoint x="1067" y="987" />
+                            <mxPoint x="1067" y="1027" />
+                            <mxPoint x="437" y="1027" />
+                            <mxPoint x="437" y="367" />
+                            <mxPoint x="547" y="367" />
+                            <mxPoint x="547" y="357" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e44" edge="1" parent="1" source="INCIDENT_REPORT.DamagedEquipmentID" style="exitX=0.462;exitY=1;exitDx=0;exitDy=0;entryX=0.257;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#b85450;fontSize=10;" target="EQUIPMENT.EquipmentID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1677" y="957" />
+                            <mxPoint x="1677" y="987" />
+                            <mxPoint x="1667" y="987" />
+                            <mxPoint x="1667" y="1087" />
+                            <mxPoint x="1717" y="1087" />
+                            <mxPoint x="1717" y="1067" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="T.SUBCONTRACT" value="&lt;b&gt;SUBCONTRACT&lt;/b&gt;" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+                    <mxGeometry x="980" y="607.82" width="355" height="26" as="geometry" />
+                </mxCell>
+                <mxCell id="SUBCONTRACT.ContractAgreementNo" value="&lt;u&gt;ContractAgreementNo&lt;/u&gt;" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="980" y="633.82" width="151" height="28" as="geometry" />
+                </mxCell>
+                <mxCell id="SUBCONTRACT.ProjectID" value="ProjectID" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="1131" y="633.82" width="81" height="28" as="geometry" />
+                </mxCell>
+                <mxCell id="SUBCONTRACT.SubcontractorID" value="SubcontractorID" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="1212" y="633.82" width="123" height="28" as="geometry" />
+                </mxCell>
+                <mxCell id="esc1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#d6b656;fontSize=10;" edge="1" parent="1" source="SUBCONTRACT.ProjectID" target="PROJECT.ProjectID">
+                    <mxGeometry relative="1" as="geometry" />
+                </mxCell>
+                <mxCell id="esc2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#d6b656;fontSize=10;" edge="1" parent="1" source="SUBCONTRACT.SubcontractorID" target="SUBCONTRACTOR.SubcontractorID">
+                    <mxGeometry relative="1" as="geometry" />
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="R1" name="Organization">
+        <mxGraphModel grid="1" page="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1358" pageHeight="382" math="0" shadow="0">
+            <root>
+                <mxCell id="0" />
+                <mxCell id="1" parent="0" />
+                <mxCell id="T.DEPARTMENT" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;DEPARTMENT&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="399" x="40" y="40" as="geometry" />
+                </mxCell>
+                <mxCell id="DEPARTMENT.DeptID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;DeptID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="64" x="40" y="66" as="geometry" />
+                </mxCell>
+                <mxCell id="DEPARTMENT.DeptName" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="DeptName" vertex="1">
+                    <mxGeometry height="28" width="74" x="104" y="66" as="geometry" />
+                </mxCell>
+                <mxCell id="DEPARTMENT.OfficeLocation" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="OfficeLocation" vertex="1">
+                    <mxGeometry height="28" width="116" x="178" y="66" as="geometry" />
+                </mxCell>
+                <mxCell id="DEPARTMENT.Budget" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="Budget" vertex="1">
+                    <mxGeometry height="28" width="64" x="294" y="66" as="geometry" />
+                </mxCell>
+                <mxCell id="DEPARTMENT.HeadEmpID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="HeadEmpID" vertex="1">
+                    <mxGeometry height="28" width="81" x="358" y="66" as="geometry" />
+                </mxCell>
+                <mxCell id="T.EMPLOYEE" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;EMPLOYEE&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="1079" x="40" y="164" as="geometry" />
+                </mxCell>
+                <mxCell id="EMPLOYEE.EmpID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;EmpID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="64" x="40" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="EMPLOYEE.FirstName" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="FirstName" vertex="1">
+                    <mxGeometry height="28" width="81" x="104" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="EMPLOYEE.MiddleName" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="MiddleName" vertex="1">
+                    <mxGeometry height="28" width="88" x="185" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="EMPLOYEE.LastName" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="LastName" vertex="1">
+                    <mxGeometry height="28" width="74" x="273" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="EMPLOYEE.Street" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="Street" vertex="1">
+                    <mxGeometry height="28" width="64" x="347" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="EMPLOYEE.Ward" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="Ward" vertex="1">
+                    <mxGeometry height="28" width="64" x="411" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="EMPLOYEE.District" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="District" vertex="1">
+                    <mxGeometry height="28" width="74" x="475" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="EMPLOYEE.City" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="City" vertex="1">
+                    <mxGeometry height="28" width="64" x="549" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="EMPLOYEE.DOB" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="DOB" vertex="1">
+                    <mxGeometry height="28" width="64" x="613" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="EMPLOYEE.HireDate" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="HireDate" vertex="1">
+                    <mxGeometry height="28" width="74" x="677" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="EMPLOYEE.Salary" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="Salary" vertex="1">
+                    <mxGeometry height="28" width="64" x="751" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="EMPLOYEE.JobTitle" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="JobTitle" vertex="1">
+                    <mxGeometry height="28" width="74" x="815" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="EMPLOYEE.Email" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="Email" vertex="1">
+                    <mxGeometry height="28" width="64" x="889" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="EMPLOYEE.DeptID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="DeptID" vertex="1">
+                    <mxGeometry height="28" width="64" x="953" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="EMPLOYEE.SupervisorID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="SupervisorID" vertex="1">
+                    <mxGeometry height="28" width="102" x="1017" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="T.EMPLOYEE_PHONE" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;EMPLOYEE_PHONE&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="159" x="1159" y="164" as="geometry" />
+                </mxCell>
+                <mxCell id="EMPLOYEE_PHONE.EmpID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;EmpID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="64" x="1159" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="EMPLOYEE_PHONE.PhoneNumber" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;PhoneNumber&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="95" x="1223" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="T.EMPLOYEE_CERTIFICATION" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;EMPLOYEE_CERTIFICATION&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="196" x="40" y="288" as="geometry" />
+                </mxCell>
+                <mxCell id="EMPLOYEE_CERTIFICATION.EmpID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;EmpID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="64" x="40" y="314" as="geometry" />
+                </mxCell>
+                <mxCell id="EMPLOYEE_CERTIFICATION.Certification" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;Certification&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="132" x="104" y="314" as="geometry" />
+                </mxCell>
+                <mxCell id="T.DEPENDENT" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;DEPENDENT&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="666" x="276" y="288" as="geometry" />
+                </mxCell>
+                <mxCell id="DEPENDENT.EmpID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;EmpID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="64" x="276" y="314" as="geometry" />
+                </mxCell>
+                <mxCell id="DEPENDENT.DependentName" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u style=&quot;text-decoration-style:dashed&quot;&gt;DependentName&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="109" x="340" y="314" as="geometry" />
+                </mxCell>
+                <mxCell id="DEPENDENT.Gender" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="Gender" vertex="1">
+                    <mxGeometry height="28" width="64" x="449" y="314" as="geometry" />
+                </mxCell>
+                <mxCell id="DEPENDENT.BirthDate" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="BirthDate" vertex="1">
+                    <mxGeometry height="28" width="81" x="513" y="314" as="geometry" />
+                </mxCell>
+                <mxCell id="DEPENDENT.Relationship" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="Relationship" vertex="1">
+                    <mxGeometry height="28" width="102" x="594" y="314" as="geometry" />
+                </mxCell>
+                <mxCell id="DEPENDENT.ContactPhone" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="ContactPhone" vertex="1">
+                    <mxGeometry height="28" width="102" x="696" y="314" as="geometry" />
+                </mxCell>
+                <mxCell id="DEPENDENT.IsEmergencyContact" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="IsEmergencyContact" vertex="1">
+                    <mxGeometry height="28" width="144" x="798" y="314" as="geometry" />
+                </mxCell>
+                <mxCell id="e1" edge="1" parent="1" source="DEPARTMENT.HeadEmpID" style="exitX=0.395;exitY=1;exitDx=0;exitDy=0;entryX=0.156;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#000000;fontSize=10;" target="EMPLOYEE.EmpID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="390" y="100" />
+                            <mxPoint x="390" y="140" />
+                            <mxPoint x="20" y="140" />
+                            <mxPoint x="20" y="230" />
+                            <mxPoint x="50" y="230" />
+                            <mxPoint x="50" y="220" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e2" edge="1" parent="1" source="EMPLOYEE.DeptID" style="exitX=0.422;exitY=1;exitDx=0;exitDy=0;entryX=0.469;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#000000;fontSize=10;" target="DEPARTMENT.DeptID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="980" y="220" />
+                            <mxPoint x="980" y="240" />
+                            <mxPoint x="10" y="240" />
+                            <mxPoint x="10" y="110" />
+                            <mxPoint x="70" y="110" />
+                            <mxPoint x="70" y="100" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e3" edge="1" parent="1" source="EMPLOYEE.SupervisorID" style="exitX=0.422;exitY=1;exitDx=0;exitDy=0;entryX=0.469;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#000000;fontSize=10;" target="EMPLOYEE.EmpID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1060" y="220" />
+                            <mxPoint x="1060" y="230" />
+                            <mxPoint x="70" y="230" />
+                            <mxPoint x="70" y="220" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e4" edge="1" parent="1" source="EMPLOYEE_PHONE.EmpID" style="exitX=0.484;exitY=1;exitDx=0;exitDy=0;entryX=0.781;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#000000;fontSize=10;" target="EMPLOYEE.EmpID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1190" y="220" />
+                            <mxPoint x="1190" y="250" />
+                            <mxPoint x="90" y="250" />
+                            <mxPoint x="90" y="220" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e5" edge="1" parent="1" source="EMPLOYEE_CERTIFICATION.EmpID" style="exitX=0.469;exitY=1;exitDx=0;exitDy=0;entryX=0.781;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#000000;fontSize=10;" target="EMPLOYEE.EmpID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="70" y="350" />
+                            <mxPoint x="70" y="360" />
+                            <mxPoint x="20" y="360" />
+                            <mxPoint x="20" y="250" />
+                            <mxPoint x="90" y="250" />
+                            <mxPoint x="90" y="220" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e6" edge="1" parent="1" style="exitX=0.375;exitY=1;exitDx=0;exitDy=0;entryX=0.000;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#000000;fontSize=10;" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="320" y="350" />
+                            <mxPoint x="320" y="360" />
+                            <mxPoint x="270" y="360" />
+                            <mxPoint x="270" y="260" />
+                            <mxPoint x="60" y="260" />
+                            <mxPoint x="60" y="220" />
+                        </Array>
+                        <mxPoint x="320" y="342" as="sourcePoint" />
+                        <mxPoint x="60" y="218" as="targetPoint" />
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="R2" name="Projects">
+        <mxGraphModel dx="1360" dy="1272" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1390" pageHeight="754" math="0" shadow="0">
+            <root>
+                <mxCell id="0" />
+                <mxCell id="1" parent="0" />
+                <mxCell id="T.CLIENT" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;CLIENT&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="528" x="40" y="40" as="geometry" />
+                </mxCell>
+                <mxCell id="CLIENT.ClientID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;ClientID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="74" x="40" y="66" as="geometry" />
+                </mxCell>
+                <mxCell id="CLIENT.ClientName" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="ClientName" vertex="1">
+                    <mxGeometry height="28" width="88" x="114" y="66" as="geometry" />
+                </mxCell>
+                <mxCell id="CLIENT.ClientType" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="ClientType" vertex="1">
+                    <mxGeometry height="28" width="88" x="202" y="66" as="geometry" />
+                </mxCell>
+                <mxCell id="CLIENT.ContactPerson" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="ContactPerson" vertex="1">
+                    <mxGeometry height="28" width="109" x="290" y="66" as="geometry" />
+                </mxCell>
+                <mxCell id="CLIENT.ContactEmail" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="ContactEmail" vertex="1">
+                    <mxGeometry height="28" width="102" x="399" y="66" as="geometry" />
+                </mxCell>
+                <mxCell id="CLIENT.TaxCode" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="TaxCode" vertex="1">
+                    <mxGeometry height="28" width="67" x="501" y="66" as="geometry" />
+                </mxCell>
+                <mxCell id="T.CLIENT_PHONE" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;CLIENT_PHONE&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="176" x="608" y="40" as="geometry" />
+                </mxCell>
+                <mxCell id="CLIENT_PHONE.ClientID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;ClientID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="74" x="608" y="66" as="geometry" />
+                </mxCell>
+                <mxCell id="CLIENT_PHONE.ContactPhone" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;ContactPhone&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="102" x="682" y="66" as="geometry" />
+                </mxCell>
+                <mxCell id="T.PROJECT" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;PROJECT&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="916" x="40" y="164" as="geometry" />
+                </mxCell>
+                <mxCell id="PROJECT.ProjectID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;ProjectID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="81" x="40" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="PROJECT.ProjectName" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="ProjectName" vertex="1">
+                    <mxGeometry height="28" width="95" x="121" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="PROJECT.StartDate" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="StartDate" vertex="1">
+                    <mxGeometry height="28" width="81" x="216" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="PROJECT.PlannedEndDate" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="PlannedEndDate" vertex="1">
+                    <mxGeometry height="28" width="116" x="297" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="PROJECT.ActualEndDate" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="ActualEndDate" vertex="1">
+                    <mxGeometry height="28" width="109" x="413" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="PROJECT.EstimatedBudget" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="EstimatedBudget" vertex="1">
+                    <mxGeometry height="28" width="123" x="522" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="PROJECT.Status" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="Status" vertex="1">
+                    <mxGeometry height="28" width="64" x="645" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="PROJECT.ClientID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="ClientID" vertex="1">
+                    <mxGeometry height="28" width="74" x="709" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="PROJECT.DeptID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="DeptID" vertex="1">
+                    <mxGeometry height="28" width="64" x="783" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="PROJECT.DirectorEmpID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="DirectorEmpID" vertex="1">
+                    <mxGeometry height="28" width="109" x="847" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="T.PROJECT_SITE" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;PROJECT_SITE&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="905" x="40" y="288" as="geometry" />
+                </mxCell>
+                <mxCell id="PROJECT_SITE.SiteID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;SiteID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="64" x="40" y="314" as="geometry" />
+                </mxCell>
+                <mxCell id="PROJECT_SITE.ProjectID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="ProjectID" vertex="1">
+                    <mxGeometry height="28" width="81" x="104" y="314" as="geometry" />
+                </mxCell>
+                <mxCell id="PROJECT_SITE.SiteName" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="SiteName" vertex="1">
+                    <mxGeometry height="28" width="74" x="185" y="314" as="geometry" />
+                </mxCell>
+                <mxCell id="PROJECT_SITE.Latitude" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="Latitude" vertex="1">
+                    <mxGeometry height="28" width="74" x="259" y="314" as="geometry" />
+                </mxCell>
+                <mxCell id="PROJECT_SITE.Longitude" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="Longitude" vertex="1">
+                    <mxGeometry height="28" width="81" x="333" y="314" as="geometry" />
+                </mxCell>
+                <mxCell id="PROJECT_SITE.StreetAddress" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="StreetAddress" vertex="1">
+                    <mxGeometry height="28" width="109" x="414" y="314" as="geometry" />
+                </mxCell>
+                <mxCell id="PROJECT_SITE.District" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="District" vertex="1">
+                    <mxGeometry height="28" width="74" x="523" y="314" as="geometry" />
+                </mxCell>
+                <mxCell id="PROJECT_SITE.City_Province" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="City_Province" vertex="1">
+                    <mxGeometry height="28" width="109" x="597" y="314" as="geometry" />
+                </mxCell>
+                <mxCell id="PROJECT_SITE.EnvironmentalPermit" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="EnvironmentalPermit" vertex="1">
+                    <mxGeometry height="28" width="151" x="706" y="314" as="geometry" />
+                </mxCell>
+                <mxCell id="PROJECT_SITE.SiteStatus" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="SiteStatus" vertex="1">
+                    <mxGeometry height="28" width="88" x="857" y="314" as="geometry" />
+                </mxCell>
+                <mxCell id="T.PROJECT_PHASE" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;PROJECT_PHASE&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="693" x="40" y="412" as="geometry" />
+                </mxCell>
+                <mxCell id="PROJECT_PHASE.ProjectID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;ProjectID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="81" x="40" y="438" as="geometry" />
+                </mxCell>
+                <mxCell id="PROJECT_PHASE.PhaseNumber" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u style=&quot;text-decoration-style:dashed&quot;&gt;PhaseNumber&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="95" x="121" y="438" as="geometry" />
+                </mxCell>
+                <mxCell id="PROJECT_PHASE.PhaseTitle" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="PhaseTitle" vertex="1">
+                    <mxGeometry height="28" width="88" x="216" y="438" as="geometry" />
+                </mxCell>
+                <mxCell id="PROJECT_PHASE.StartDate" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="StartDate" vertex="1">
+                    <mxGeometry height="28" width="81" x="304" y="438" as="geometry" />
+                </mxCell>
+                <mxCell id="PROJECT_PHASE.TargetCompletionDate" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="TargetCompletionDate" vertex="1">
+                    <mxGeometry height="28" width="158" x="385" y="438" as="geometry" />
+                </mxCell>
+                <mxCell id="PROJECT_PHASE.PhaseBudget" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="PhaseBudget" vertex="1">
+                    <mxGeometry height="28" width="95" x="543" y="438" as="geometry" />
+                </mxCell>
+                <mxCell id="PROJECT_PHASE.PhaseStatus" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="PhaseStatus" vertex="1">
+                    <mxGeometry height="28" width="95" x="638" y="438" as="geometry" />
+                </mxCell>
+                <mxCell id="T.TASK" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;TASK&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="1010" x="40" y="536" as="geometry" />
+                </mxCell>
+                <mxCell id="TASK.TaskID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;TaskID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="64" x="40" y="562" as="geometry" />
+                </mxCell>
+                <mxCell id="TASK.TaskName" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="TaskName" vertex="1">
+                    <mxGeometry height="28" width="74" x="104" y="562" as="geometry" />
+                </mxCell>
+                <mxCell id="TASK.EstimatedHours" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="EstimatedHours" vertex="1">
+                    <mxGeometry height="28" width="116" x="178" y="562" as="geometry" />
+                </mxCell>
+                <mxCell id="TASK.ScheduledStartDate" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="ScheduledStartDate" vertex="1">
+                    <mxGeometry height="28" width="144" x="294" y="562" as="geometry" />
+                </mxCell>
+                <mxCell id="TASK.ScheduledEndDate" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="ScheduledEndDate" vertex="1">
+                    <mxGeometry height="28" width="130" x="438" y="562" as="geometry" />
+                </mxCell>
+                <mxCell id="TASK.ActualEndDate" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="ActualEndDate" vertex="1">
+                    <mxGeometry height="28" width="109" x="568" y="562" as="geometry" />
+                </mxCell>
+                <mxCell id="TASK.PriorityLevel" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="PriorityLevel" vertex="1">
+                    <mxGeometry height="28" width="109" x="677" y="562" as="geometry" />
+                </mxCell>
+                <mxCell id="TASK.TaskStatus" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="TaskStatus" vertex="1">
+                    <mxGeometry height="28" width="88" x="786" y="562" as="geometry" />
+                </mxCell>
+                <mxCell id="TASK.ProjectID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="ProjectID" vertex="1">
+                    <mxGeometry height="28" width="81" x="874" y="562" as="geometry" />
+                </mxCell>
+                <mxCell id="TASK.PhaseNumber" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="PhaseNumber" vertex="1">
+                    <mxGeometry height="28" width="95" x="955" y="562" as="geometry" />
+                </mxCell>
+                <mxCell id="T.PRECEDES" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;PRECEDES&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="260" x="1090" y="536" as="geometry" />
+                </mxCell>
+                <mxCell id="PRECEDES.PredecessorTaskID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;PredecessorTaskID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="137" x="1090" y="562" as="geometry" />
+                </mxCell>
+                <mxCell id="PRECEDES.SuccessorTaskID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;SuccessorTaskID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="123" x="1227" y="562" as="geometry" />
+                </mxCell>
+                <mxCell id="T.WORKS_ON_TASK" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;WORKS_ON_TASK&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="413" x="40" y="660" as="geometry" />
+                </mxCell>
+                <mxCell id="WORKS_ON_TASK.EmpID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;EmpID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="64" x="40" y="686" as="geometry" />
+                </mxCell>
+                <mxCell id="WORKS_ON_TASK.TaskID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;TaskID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="64" x="104" y="686" as="geometry" />
+                </mxCell>
+                <mxCell id="WORKS_ON_TASK.AssignedDate" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="AssignedDate" vertex="1">
+                    <mxGeometry height="28" width="102" x="168" y="686" as="geometry" />
+                </mxCell>
+                <mxCell id="WORKS_ON_TASK.RoleOnTask" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="RoleOnTask" vertex="1">
+                    <mxGeometry height="28" width="88" x="270" y="686" as="geometry" />
+                </mxCell>
+                <mxCell id="WORKS_ON_TASK.HoursLogged" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="HoursLogged" vertex="1">
+                    <mxGeometry height="28" width="95" x="358" y="686" as="geometry" />
+                </mxCell>
+                <mxCell id="T.DEPARTMENT" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#000000;fontSize=12;dashed=1;" value="&lt;b&gt;DEPARTMENT&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="100" x="493" y="660" as="geometry" />
+                </mxCell>
+                <mxCell id="DEPARTMENT.DeptID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;dashed=1;" value="&lt;u&gt;DeptID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="100" x="493" y="686" as="geometry" />
+                </mxCell>
+                <mxCell id="T.EMPLOYEE" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#000000;fontSize=12;dashed=1;" value="&lt;b&gt;EMPLOYEE&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="84" x="633" y="660" as="geometry" />
+                </mxCell>
+                <mxCell id="EMPLOYEE.EmpID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;dashed=1;" value="&lt;u&gt;EmpID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="84" x="633" y="686" as="geometry" />
+                </mxCell>
+                <mxCell id="e1" edge="1" parent="1" source="CLIENT_PHONE.ClientID" style="exitX=0.432;exitY=1;exitDx=0;exitDy=0;entryX=0.135;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#000000;fontSize=10;" target="CLIENT.ClientID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="640" y="100" />
+                            <mxPoint x="640" y="120" />
+                            <mxPoint x="50" y="120" />
+                            <mxPoint x="50" y="100" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e2" edge="1" parent="1" source="PROJECT.ClientID" style="exitX=0.419;exitY=1;exitDx=0;exitDy=0;entryX=0.405;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#000000;fontSize=10;" target="CLIENT.ClientID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="740" y="220" />
+                            <mxPoint x="740" y="230" />
+                            <mxPoint x="20" y="230" />
+                            <mxPoint x="20" y="110" />
+                            <mxPoint x="70" y="110" />
+                            <mxPoint x="70" y="100" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e3" edge="1" parent="1" source="PROJECT.DeptID" style="exitX=0.422;exitY=1;exitDx=0;exitDy=0;entryX=0.470;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#000000;fontSize=10;" target="DEPARTMENT.DeptID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="810" y="220" />
+                            <mxPoint x="810" y="270" />
+                            <mxPoint x="1060" y="270" />
+                            <mxPoint x="1060" y="730" />
+                            <mxPoint x="540" y="730" />
+                            <mxPoint x="540" y="720" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e4" edge="1" parent="1" source="PROJECT.DirectorEmpID" style="exitX=0.486;exitY=1;exitDx=0;exitDy=0;entryX=0.202;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#000000;fontSize=10;" target="EMPLOYEE.EmpID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="900" y="220" />
+                            <mxPoint x="900" y="260" />
+                            <mxPoint x="1070" y="260" />
+                            <mxPoint x="1070" y="750" />
+                            <mxPoint x="650" y="750" />
+                            <mxPoint x="650" y="720" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e5" edge="1" parent="1" source="PROJECT_SITE.ProjectID" style="exitX=0.444;exitY=1;exitDx=0;exitDy=0;entryX=0.494;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#000000;fontSize=10;" target="PROJECT.ProjectID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="140" y="350" />
+                            <mxPoint x="140" y="360" />
+                            <mxPoint x="20" y="360" />
+                            <mxPoint x="20" y="240" />
+                            <mxPoint x="80" y="240" />
+                            <mxPoint x="80" y="220" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e6" edge="1" parent="1" source="PROJECT_PHASE.ProjectID" style="exitX=0.247;exitY=1;exitDx=0;exitDy=0;entryX=0.247;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#000000;fontSize=10;" target="PROJECT.ProjectID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="60" y="470" />
+                            <mxPoint x="60" y="490" />
+                            <mxPoint x="10" y="490" />
+                            <mxPoint x="10" y="250" />
+                            <mxPoint x="60" y="250" />
+                            <mxPoint x="60" y="220" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e7" edge="1" parent="1" source="TASK.ProjectID" style="exitX=0.444;exitY=1;exitDx=0;exitDy=0;entryX=0.494;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#000000;fontSize=10;" target="PROJECT_PHASE.ProjectID" value="(ProjectID, PhaseNumber)">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="910" y="600" />
+                            <mxPoint x="20" y="600" />
+                            <mxPoint x="20" y="480" />
+                            <mxPoint x="80" y="480" />
+                            <mxPoint x="80" y="470" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e8" edge="1" parent="1" source="PRECEDES.PredecessorTaskID" style="exitX=0.438;exitY=1;exitDx=0;exitDy=0;entryX=0.156;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#000000;fontSize=10;" target="TASK.TaskID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1150" y="600" />
+                            <mxPoint x="1150" y="620" />
+                            <mxPoint x="50" y="620" />
+                            <mxPoint x="50" y="600" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e9" edge="1" parent="1" source="PRECEDES.SuccessorTaskID" style="exitX=0.431;exitY=1;exitDx=0;exitDy=0;entryX=0.781;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#000000;fontSize=10;" target="TASK.TaskID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1280" y="600" />
+                            <mxPoint x="1280" y="610" />
+                            <mxPoint x="90" y="610" />
+                            <mxPoint x="90" y="600" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e10" edge="1" parent="1" source="WORKS_ON_TASK.EmpID" style="exitX=0.469;exitY=1;exitDx=0;exitDy=0;entryX=0.440;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#000000;fontSize=10;" target="EMPLOYEE.EmpID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="70" y="720" />
+                            <mxPoint x="70" y="740" />
+                            <mxPoint x="670" y="740" />
+                            <mxPoint x="670" y="720" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e11" edge="1" parent="1" source="WORKS_ON_TASK.TaskID" style="exitX=0.406;exitY=1;exitDx=0;exitDy=0;entryX=0.469;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#000000;fontSize=10;" target="TASK.TaskID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="130" y="720" />
+                            <mxPoint x="130" y="730" />
+                            <mxPoint x="20" y="730" />
+                            <mxPoint x="20" y="610" />
+                            <mxPoint x="70" y="610" />
+                            <mxPoint x="70" y="600" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="R3" name="Equipment">
+        <mxGraphModel dx="1360" dy="1272" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1321" pageHeight="258" math="0" shadow="0">
+            <root>
+                <mxCell id="0" />
+                <mxCell id="1" parent="0" />
+                <mxCell id="T.EQUIPMENT" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffe6cc;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;EQUIPMENT&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="613" x="40" y="40" as="geometry" />
+                </mxCell>
+                <mxCell id="EQUIPMENT.EquipmentID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;EquipmentID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="95" x="40" y="66" as="geometry" />
+                </mxCell>
+                <mxCell id="EQUIPMENT.Model" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="Model" vertex="1">
+                    <mxGeometry height="28" width="64" x="135" y="66" as="geometry" />
+                </mxCell>
+                <mxCell id="EQUIPMENT.SerialNumber" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="SerialNumber" vertex="1">
+                    <mxGeometry height="28" width="102" x="199" y="66" as="geometry" />
+                </mxCell>
+                <mxCell id="EQUIPMENT.Category" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="Category" vertex="1">
+                    <mxGeometry height="28" width="74" x="301" y="66" as="geometry" />
+                </mxCell>
+                <mxCell id="EQUIPMENT.Ownership" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="Ownership" vertex="1">
+                    <mxGeometry height="28" width="81" x="375" y="66" as="geometry" />
+                </mxCell>
+                <mxCell id="EQUIPMENT.HourlyRate" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="HourlyRate" vertex="1">
+                    <mxGeometry height="28" width="88" x="456" y="66" as="geometry" />
+                </mxCell>
+                <mxCell id="EQUIPMENT.CurrentStatus" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="CurrentStatus" vertex="1">
+                    <mxGeometry height="28" width="109" x="544" y="66" as="geometry" />
+                </mxCell>
+                <mxCell id="T.MAINTENANCE_RECORD" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffe6cc;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;MAINTENANCE_RECORD&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="588" x="693" y="40" as="geometry" />
+                </mxCell>
+                <mxCell id="MAINTENANCE_RECORD.EquipmentID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;EquipmentID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="95" x="693" y="66" as="geometry" />
+                </mxCell>
+                <mxCell id="MAINTENANCE_RECORD.RecordNumber" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u style=&quot;text-decoration-style:dashed&quot;&gt;RecordNumber&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="102" x="788" y="66" as="geometry" />
+                </mxCell>
+                <mxCell id="MAINTENANCE_RECORD.ServiceDate" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="ServiceDate" vertex="1">
+                    <mxGeometry height="28" width="95" x="890" y="66" as="geometry" />
+                </mxCell>
+                <mxCell id="MAINTENANCE_RECORD.MaintenanceType" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="MaintenanceType" vertex="1">
+                    <mxGeometry height="28" width="123" x="985" y="66" as="geometry" />
+                </mxCell>
+                <mxCell id="MAINTENANCE_RECORD.Cost" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="Cost" vertex="1">
+                    <mxGeometry height="28" width="64" x="1108" y="66" as="geometry" />
+                </mxCell>
+                <mxCell id="MAINTENANCE_RECORD.ServiceVendor" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="ServiceVendor" vertex="1">
+                    <mxGeometry height="28" width="109" x="1172" y="66" as="geometry" />
+                </mxCell>
+                <mxCell id="T.EQUIPMENT_DEPLOYMENT" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffe6cc;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;EQUIPMENT_DEPLOYMENT&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="665" x="40" y="164" as="geometry" />
+                </mxCell>
+                <mxCell id="EQUIPMENT_DEPLOYMENT.EquipmentID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;EquipmentID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="95" x="40" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="EQUIPMENT_DEPLOYMENT.SiteID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;SiteID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="64" x="135" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="EQUIPMENT_DEPLOYMENT.DeploymentStartDate" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;DeploymentStartDate&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="151" x="199" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="EQUIPMENT_DEPLOYMENT.DeploymentEndDate" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="DeploymentEndDate" vertex="1">
+                    <mxGeometry height="28" width="137" x="350" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="EQUIPMENT_DEPLOYMENT.HoursOperated" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="HoursOperated" vertex="1">
+                    <mxGeometry height="28" width="109" x="487" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="EQUIPMENT_DEPLOYMENT.OperatorEmpID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="OperatorEmpID" vertex="1">
+                    <mxGeometry height="28" width="109" x="596" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="T.EMPLOYEE" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#000000;fontSize=12;dashed=1;" value="&lt;b&gt;EMPLOYEE&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="84" x="745" y="164" as="geometry" />
+                </mxCell>
+                <mxCell id="EMPLOYEE.EmpID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;dashed=1;" value="&lt;u&gt;EmpID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="84" x="745" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="T.PROJECT_SITE" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#000000;fontSize=12;dashed=1;" value="&lt;b&gt;PROJECT_SITE&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="116" x="869" y="164" as="geometry" />
+                </mxCell>
+                <mxCell id="PROJECT_SITE.SiteID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;dashed=1;" value="&lt;u&gt;SiteID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="116" x="869" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="e1" edge="1" parent="1" source="MAINTENANCE_RECORD.EquipmentID" style="exitX=0.495;exitY=1;exitDx=0;exitDy=0;entryX=0.211;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#000000;fontSize=10;" target="EQUIPMENT.EquipmentID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="740" y="100" />
+                            <mxPoint x="740" y="120" />
+                            <mxPoint x="60" y="120" />
+                            <mxPoint x="60" y="100" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e2" edge="1" parent="1" source="EQUIPMENT_DEPLOYMENT.EquipmentID" style="exitX=0.421;exitY=1;exitDx=0;exitDy=0;entryX=0.421;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#000000;fontSize=10;" target="EQUIPMENT.EquipmentID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="80" y="220" />
+                            <mxPoint x="80" y="230" />
+                            <mxPoint x="20" y="230" />
+                            <mxPoint x="20" y="110" />
+                            <mxPoint x="80" y="110" />
+                            <mxPoint x="80" y="100" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e3" edge="1" parent="1" source="EQUIPMENT_DEPLOYMENT.SiteID" style="exitX=0.391;exitY=1;exitDx=0;exitDy=0;entryX=0.440;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#000000;fontSize=10;" target="PROJECT_SITE.SiteID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="160" y="220" />
+                            <mxPoint x="160" y="240" />
+                            <mxPoint x="920" y="240" />
+                            <mxPoint x="920" y="220" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e4" edge="1" parent="1" source="EQUIPMENT_DEPLOYMENT.OperatorEmpID" style="exitX=0.495;exitY=1;exitDx=0;exitDy=0;entryX=0.417;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#000000;fontSize=10;" target="EMPLOYEE.EmpID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="650" y="220" />
+                            <mxPoint x="650" y="230" />
+                            <mxPoint x="780" y="230" />
+                            <mxPoint x="780" y="220" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="R4" name="Materials &amp; Procurement">
+        <mxGraphModel grid="1" page="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1532" pageHeight="630" math="0" shadow="0">
+            <root>
+                <mxCell id="0" />
+                <mxCell id="1" parent="0" />
+                <mxCell id="T.SUPPLIER" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;SUPPLIER&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="454" x="40" y="40" as="geometry" />
+                </mxCell>
+                <mxCell id="SUPPLIER.SupplierID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;SupplierID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="88" x="40" y="66" as="geometry" />
+                </mxCell>
+                <mxCell id="SUPPLIER.CompanyName" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="CompanyName" vertex="1">
+                    <mxGeometry height="28" width="95" x="128" y="66" as="geometry" />
+                </mxCell>
+                <mxCell id="SUPPLIER.TaxCode" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="TaxCode" vertex="1">
+                    <mxGeometry height="28" width="67" x="223" y="66" as="geometry" />
+                </mxCell>
+                <mxCell id="SUPPLIER.ContactEmail" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="ContactEmail" vertex="1">
+                    <mxGeometry height="28" width="102" x="290" y="66" as="geometry" />
+                </mxCell>
+                <mxCell id="SUPPLIER.CreditRating" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="CreditRating" vertex="1">
+                    <mxGeometry height="28" width="102" x="392" y="66" as="geometry" />
+                </mxCell>
+                <mxCell id="T.SUPPLIER_PHONE" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;SUPPLIER_PHONE&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="190" x="534" y="40" as="geometry" />
+                </mxCell>
+                <mxCell id="SUPPLIER_PHONE.SupplierID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;SupplierID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="88" x="534" y="66" as="geometry" />
+                </mxCell>
+                <mxCell id="SUPPLIER_PHONE.ContactPhone" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;ContactPhone&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="102" x="622" y="66" as="geometry" />
+                </mxCell>
+                <mxCell id="T.SUPPLIER_CATEGORY" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;SUPPLIER_CATEGORY&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="204" x="764" y="40" as="geometry" />
+                </mxCell>
+                <mxCell id="SUPPLIER_CATEGORY.SupplierID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;SupplierID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="88" x="764" y="66" as="geometry" />
+                </mxCell>
+                <mxCell id="SUPPLIER_CATEGORY.SupplyCategory" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;SupplyCategory&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="116" x="852" y="66" as="geometry" />
+                </mxCell>
+                <mxCell id="T.MATERIAL" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;MATERIAL&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="521" x="40" y="164" as="geometry" />
+                </mxCell>
+                <mxCell id="MATERIAL.MaterialID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;MaterialID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="88" x="40" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="MATERIAL.MaterialName" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="MaterialName" vertex="1">
+                    <mxGeometry height="28" width="102" x="128" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="MATERIAL.Category" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="Category" vertex="1">
+                    <mxGeometry height="28" width="74" x="230" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="MATERIAL.StandardUnit" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="StandardUnit" vertex="1">
+                    <mxGeometry height="28" width="102" x="304" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="MATERIAL.UnitPrice" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="UnitPrice" vertex="1">
+                    <mxGeometry height="28" width="81" x="406" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="MATERIAL.MinStock" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="MinStock" vertex="1">
+                    <mxGeometry height="28" width="74" x="487" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="T.PURCHASE_ORDER" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;PURCHASE_ORDER&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="588" x="601" y="164" as="geometry" />
+                </mxCell>
+                <mxCell id="PURCHASE_ORDER.PO_ID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;PO_ID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="64" x="601" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="PURCHASE_ORDER.OrderDate" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="OrderDate" vertex="1">
+                    <mxGeometry height="28" width="81" x="665" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="PURCHASE_ORDER.ExpectedDeliveryDate" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="ExpectedDeliveryDate" vertex="1">
+                    <mxGeometry height="28" width="158" x="746" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="PURCHASE_ORDER.DeliveryStatus" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="DeliveryStatus" vertex="1">
+                    <mxGeometry height="28" width="116" x="904" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="PURCHASE_ORDER.ProjectID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="ProjectID" vertex="1">
+                    <mxGeometry height="28" width="81" x="1020" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="PURCHASE_ORDER.SupplierID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="SupplierID" vertex="1">
+                    <mxGeometry height="28" width="88" x="1101" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="T.PO_ITEM" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;PO_ITEM&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="486" x="40" y="288" as="geometry" />
+                </mxCell>
+                <mxCell id="PO_ITEM.PO_ID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;PO_ID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="64" x="40" y="314" as="geometry" />
+                </mxCell>
+                <mxCell id="PO_ITEM.LineNumber" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u style=&quot;text-decoration-style:dashed&quot;&gt;LineNumber&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="88" x="104" y="314" as="geometry" />
+                </mxCell>
+                <mxCell id="PO_ITEM.QuantityOrdered" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="QuantityOrdered" vertex="1">
+                    <mxGeometry height="28" width="123" x="192" y="314" as="geometry" />
+                </mxCell>
+                <mxCell id="PO_ITEM.AgreedUnitPrice" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="AgreedUnitPrice" vertex="1">
+                    <mxGeometry height="28" width="123" x="315" y="314" as="geometry" />
+                </mxCell>
+                <mxCell id="PO_ITEM.MaterialID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="MaterialID" vertex="1">
+                    <mxGeometry height="28" width="88" x="438" y="314" as="geometry" />
+                </mxCell>
+                <mxCell id="T.SITE_INVENTORY" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;SITE_INVENTORY&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="612" x="566" y="288" as="geometry" />
+                </mxCell>
+                <mxCell id="SITE_INVENTORY.SiteID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;SiteID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="64" x="566" y="314" as="geometry" />
+                </mxCell>
+                <mxCell id="SITE_INVENTORY.MaterialID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;MaterialID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="88" x="630" y="314" as="geometry" />
+                </mxCell>
+                <mxCell id="SITE_INVENTORY.CurrentStockQuantity" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="CurrentStockQuantity" vertex="1">
+                    <mxGeometry height="28" width="158" x="718" y="314" as="geometry" />
+                </mxCell>
+                <mxCell id="SITE_INVENTORY.SafetyReorderQuantity" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="SafetyReorderQuantity" vertex="1">
+                    <mxGeometry height="28" width="165" x="876" y="314" as="geometry" />
+                </mxCell>
+                <mxCell id="SITE_INVENTORY.LastStocktakeDate" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="LastStocktakeDate" vertex="1">
+                    <mxGeometry height="28" width="137" x="1041" y="314" as="geometry" />
+                </mxCell>
+                <mxCell id="T.DELIVERY_DISPATCH" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;DELIVERY_DISPATCH&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="768" x="40" y="412" as="geometry" />
+                </mxCell>
+                <mxCell id="DELIVERY_DISPATCH.DeliveryCode" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;DeliveryCode&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="102" x="40" y="438" as="geometry" />
+                </mxCell>
+                <mxCell id="DELIVERY_DISPATCH.SupplierID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="SupplierID" vertex="1">
+                    <mxGeometry height="28" width="88" x="142" y="438" as="geometry" />
+                </mxCell>
+                <mxCell id="DELIVERY_DISPATCH.MaterialID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="MaterialID" vertex="1">
+                    <mxGeometry height="28" width="88" x="230" y="438" as="geometry" />
+                </mxCell>
+                <mxCell id="DELIVERY_DISPATCH.SiteID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="SiteID" vertex="1">
+                    <mxGeometry height="28" width="64" x="318" y="438" as="geometry" />
+                </mxCell>
+                <mxCell id="DELIVERY_DISPATCH.DeliveryDate" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="DeliveryDate" vertex="1">
+                    <mxGeometry height="28" width="102" x="382" y="438" as="geometry" />
+                </mxCell>
+                <mxCell id="DELIVERY_DISPATCH.DeliveredQuantity" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="DeliveredQuantity" vertex="1">
+                    <mxGeometry height="28" width="137" x="484" y="438" as="geometry" />
+                </mxCell>
+                <mxCell id="DELIVERY_DISPATCH.ReceivedByEmpID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="ReceivedByEmpID" vertex="1">
+                    <mxGeometry height="28" width="123" x="621" y="438" as="geometry" />
+                </mxCell>
+                <mxCell id="DELIVERY_DISPATCH.PO_ID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="PO_ID" vertex="1">
+                    <mxGeometry height="28" width="64" x="744" y="438" as="geometry" />
+                </mxCell>
+                <mxCell id="T.MATERIAL_USAGE" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;MATERIAL_USAGE&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="399" x="848" y="412" as="geometry" />
+                </mxCell>
+                <mxCell id="MATERIAL_USAGE.TaskID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;TaskID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="64" x="848" y="438" as="geometry" />
+                </mxCell>
+                <mxCell id="MATERIAL_USAGE.MaterialID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;MaterialID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="88" x="912" y="438" as="geometry" />
+                </mxCell>
+                <mxCell id="MATERIAL_USAGE.SiteID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;SiteID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="64" x="1000" y="438" as="geometry" />
+                </mxCell>
+                <mxCell id="MATERIAL_USAGE.UsageDate" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;UsageDate&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="81" x="1064" y="438" as="geometry" />
+                </mxCell>
+                <mxCell id="MATERIAL_USAGE.QuantityUsed" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="QuantityUsed" vertex="1">
+                    <mxGeometry height="28" width="102" x="1145" y="438" as="geometry" />
+                </mxCell>
+                <mxCell id="T.EMPLOYEE" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#000000;fontSize=12;dashed=1;" value="&lt;b&gt;EMPLOYEE&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="84" x="1287" y="412" as="geometry" />
+                </mxCell>
+                <mxCell id="EMPLOYEE.EmpID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;dashed=1;" value="&lt;u&gt;EmpID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="84" x="1287" y="438" as="geometry" />
+                </mxCell>
+                <mxCell id="T.PROJECT" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#000000;fontSize=12;dashed=1;" value="&lt;b&gt;PROJECT&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="81" x="1411" y="412" as="geometry" />
+                </mxCell>
+                <mxCell id="PROJECT.ProjectID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;dashed=1;" value="&lt;u&gt;ProjectID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="81" x="1411" y="438" as="geometry" />
+                </mxCell>
+                <mxCell id="T.PROJECT_SITE" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#000000;fontSize=12;dashed=1;" value="&lt;b&gt;PROJECT_SITE&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="116" x="40" y="536" as="geometry" />
+                </mxCell>
+                <mxCell id="PROJECT_SITE.SiteID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;dashed=1;" value="&lt;u&gt;SiteID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="116" x="40" y="562" as="geometry" />
+                </mxCell>
+                <mxCell id="T.TASK" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#000000;fontSize=12;dashed=1;" value="&lt;b&gt;TASK&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="64" x="196" y="536" as="geometry" />
+                </mxCell>
+                <mxCell id="TASK.TaskID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;dashed=1;" value="&lt;u&gt;TaskID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="64" x="196" y="562" as="geometry" />
+                </mxCell>
+                <mxCell id="e1" edge="1" parent="1" source="SUPPLIER_PHONE.SupplierID" style="exitX=0.409;exitY=1;exitDx=0;exitDy=0;entryX=0.227;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#000000;fontSize=10;" target="SUPPLIER.SupplierID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="570" y="100" />
+                            <mxPoint x="570" y="120" />
+                            <mxPoint x="60" y="120" />
+                            <mxPoint x="60" y="100" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e2" edge="1" parent="1" source="SUPPLIER_CATEGORY.SupplierID" style="exitX=0.409;exitY=1;exitDx=0;exitDy=0;entryX=0.000;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#000000;fontSize=10;" target="SUPPLIER.SupplierID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="800" y="100" />
+                            <mxPoint x="800" y="130" />
+                            <mxPoint x="40" y="130" />
+                            <mxPoint x="40" y="100" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e3" edge="1" parent="1" source="PURCHASE_ORDER.ProjectID" style="exitX=0.494;exitY=1;exitDx=0;exitDy=0;entryX=0.481;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#000000;fontSize=10;" target="PROJECT.ProjectID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1060" y="220" />
+                            <mxPoint x="1060" y="270" />
+                            <mxPoint x="1390" y="270" />
+                            <mxPoint x="1390" y="480" />
+                            <mxPoint x="1450" y="480" />
+                            <mxPoint x="1450" y="470" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e4" edge="1" parent="1" source="PURCHASE_ORDER.SupplierID" style="exitX=0.443;exitY=1;exitDx=0;exitDy=0;entryX=0.682;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#000000;fontSize=10;" target="SUPPLIER.SupplierID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1140" y="220" />
+                            <mxPoint x="1140" y="230" />
+                            <mxPoint x="580" y="230" />
+                            <mxPoint x="580" y="110" />
+                            <mxPoint x="100" y="110" />
+                            <mxPoint x="100" y="100" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e5" edge="1" parent="1" source="PO_ITEM.PO_ID" style="exitX=0.469;exitY=1;exitDx=0;exitDy=0;entryX=0.453;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#000000;fontSize=10;" target="PURCHASE_ORDER.PO_ID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="70" y="350" />
+                            <mxPoint x="70" y="370" />
+                            <mxPoint x="-10" y="370" />
+                            <mxPoint x="-10" y="250" />
+                            <mxPoint x="630" y="250" />
+                            <mxPoint x="630" y="220" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e6" edge="1" parent="1" source="PO_ITEM.MaterialID" style="exitX=0.477;exitY=1;exitDx=0;exitDy=0;entryX=0.455;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#000000;fontSize=10;" target="MATERIAL.MaterialID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="480" y="350" />
+                            <mxPoint x="480" y="360" />
+                            <mxPoint x="20" y="360" />
+                            <mxPoint x="20" y="230" />
+                            <mxPoint x="80" y="230" />
+                            <mxPoint x="80" y="220" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e7" edge="1" parent="1" source="SITE_INVENTORY.SiteID" style="exitX=0.375;exitY=1;exitDx=0;exitDy=0;entryX=0.259;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#000000;fontSize=10;" target="PROJECT_SITE.SiteID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="590" y="350" />
+                            <mxPoint x="590" y="390" />
+                            <mxPoint x="20" y="390" />
+                            <mxPoint x="20" y="600" />
+                            <mxPoint x="70" y="600" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e8" edge="1" parent="1" source="SITE_INVENTORY.MaterialID" style="exitX=0.455;exitY=1;exitDx=0;exitDy=0;entryX=0.682;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#000000;fontSize=10;" target="MATERIAL.MaterialID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="670" y="350" />
+                            <mxPoint x="670" y="360" />
+                            <mxPoint x="540" y="360" />
+                            <mxPoint x="540" y="230" />
+                            <mxPoint x="100" y="230" />
+                            <mxPoint x="100" y="220" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e9" edge="1" parent="1" source="DELIVERY_DISPATCH.SupplierID" style="exitX=0.432;exitY=1;exitDx=0;exitDy=0;entryX=0.455;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#000000;fontSize=10;" target="SUPPLIER.SupplierID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="180" y="470" />
+                            <mxPoint x="180" y="490" />
+                            <mxPoint y="490" />
+                            <mxPoint y="110" />
+                            <mxPoint x="80" y="110" />
+                            <mxPoint x="80" y="100" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e10" edge="1" parent="1" source="DELIVERY_DISPATCH.MaterialID" style="exitX=0.455;exitY=1;exitDx=0;exitDy=0;entryX=0.227;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#000000;fontSize=10;" target="MATERIAL.MaterialID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="270" y="470" />
+                            <mxPoint x="270" y="480" />
+                            <mxPoint x="10" y="480" />
+                            <mxPoint x="10" y="240" />
+                            <mxPoint x="60" y="240" />
+                            <mxPoint x="60" y="220" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e11" edge="1" parent="1" source="DELIVERY_DISPATCH.SiteID" style="exitX=0.500;exitY=1;exitDx=0;exitDy=0;entryX=0.431;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#000000;fontSize=10;" target="PROJECT_SITE.SiteID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="350" y="470" />
+                            <mxPoint x="350" y="600" />
+                            <mxPoint x="90" y="600" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e12" edge="1" parent="1" source="DELIVERY_DISPATCH.ReceivedByEmpID" style="exitX=0.480;exitY=1;exitDx=0;exitDy=0;entryX=0.393;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#000000;fontSize=10;" target="EMPLOYEE.EmpID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="680" y="470" />
+                            <mxPoint x="680" y="490" />
+                            <mxPoint x="1320" y="490" />
+                            <mxPoint x="1320" y="470" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e13" edge="1" parent="1" source="DELIVERY_DISPATCH.PO_ID" style="exitX=0.406;exitY=1;exitDx=0;exitDy=0;entryX=0.141;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#000000;fontSize=10;" target="PURCHASE_ORDER.PO_ID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="770" y="470" />
+                            <mxPoint x="770" y="480" />
+                            <mxPoint x="820" y="480" />
+                            <mxPoint x="820" y="370" />
+                            <mxPoint x="550" y="370" />
+                            <mxPoint x="550" y="270" />
+                            <mxPoint x="610" y="270" />
+                            <mxPoint x="610" y="220" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e14" edge="1" parent="1" source="MATERIAL_USAGE.TaskID" style="exitX=0.500;exitY=1;exitDx=0;exitDy=0;entryX=0.375;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#000000;fontSize=10;" target="TASK.TaskID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="880" y="470" />
+                            <mxPoint x="880" y="610" />
+                            <mxPoint x="220" y="610" />
+                            <mxPoint x="220" y="600" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e15" edge="1" parent="1" source="MATERIAL_USAGE.MaterialID" style="exitX=0.432;exitY=1;exitDx=0;exitDy=0;entryX=0.000;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#000000;fontSize=10;" target="MATERIAL.MaterialID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="950" y="470" />
+                            <mxPoint x="950" y="500" />
+                            <mxPoint x="-20" y="500" />
+                            <mxPoint x="-20" y="230" />
+                            <mxPoint x="40" y="230" />
+                            <mxPoint x="40" y="220" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e16" edge="1" parent="1" source="MATERIAL_USAGE.SiteID" style="exitX=0.469;exitY=1;exitDx=0;exitDy=0;entryX=0.603;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#000000;fontSize=10;" target="PROJECT_SITE.SiteID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1030" y="470" />
+                            <mxPoint x="1030" y="620" />
+                            <mxPoint x="110" y="620" />
+                            <mxPoint x="110" y="600" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="R5" name="Subcontracting">
+        <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" page="0" pageWidth="1122" pageHeight="258" math="0" shadow="0">
+            <root>
+                <mxCell id="0" />
+                <mxCell id="1" parent="0" />
+                <mxCell id="T.SUBCONTRACTOR" value="&lt;b&gt;SUBCONTRACTOR&lt;/b&gt;" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="40" width="851" height="26" as="geometry" />
+                </mxCell>
+                <mxCell id="SUBCONTRACTOR.SubcontractorID" value="&lt;u&gt;SubcontractorID&lt;/u&gt;" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="66" width="123" height="28" as="geometry" />
+                </mxCell>
+                <mxCell id="SUBCONTRACTOR.CompanyName" value="CompanyName" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="163" y="66" width="95" height="28" as="geometry" />
+                </mxCell>
+                <mxCell id="SUBCONTRACTOR.TaxCode" value="TaxCode" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="258" y="66" width="67" height="28" as="geometry" />
+                </mxCell>
+                <mxCell id="SUBCONTRACTOR.ContactEmail" value="ContactEmail" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="325" y="66" width="102" height="28" as="geometry" />
+                </mxCell>
+                <mxCell id="SUBCONTRACTOR.ContactPhone" value="ContactPhone" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="427" y="66" width="102" height="28" as="geometry" />
+                </mxCell>
+                <mxCell id="SUBCONTRACTOR.TradeSpecialty" value="TradeSpecialty" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="529" y="66" width="116" height="28" as="geometry" />
+                </mxCell>
+                <mxCell id="SUBCONTRACTOR.LicenseNumber" value="LicenseNumber" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="645" y="66" width="109" height="28" as="geometry" />
+                </mxCell>
+                <mxCell id="SUBCONTRACTOR.SafetyRatingScore" value="SafetyRatingScore" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="754" y="66" width="137" height="28" as="geometry" />
+                </mxCell>
+                <mxCell id="T.SUBCONTRACT" value="&lt;b&gt;SUBCONTRACT&lt;/b&gt;" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="164" width="921" height="26" as="geometry" />
+                </mxCell>
+                <mxCell id="SUBCONTRACT.ContractAgreementNo" value="&lt;u&gt;ContractAgreementNo&lt;/u&gt;" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="190" width="151" height="28" as="geometry" />
+                </mxCell>
+                <mxCell id="SUBCONTRACT.ProjectID" value="ProjectID" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="191" y="190" width="81" height="28" as="geometry" />
+                </mxCell>
+                <mxCell id="SUBCONTRACT.SubcontractorID" value="SubcontractorID" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="272" y="190" width="123" height="28" as="geometry" />
+                </mxCell>
+                <mxCell id="SUBCONTRACT.ScopeDescription" value="ScopeDescription" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="395" y="190" width="130" height="28" as="geometry" />
+                </mxCell>
+                <mxCell id="SUBCONTRACT.ContractValue" value="ContractValue" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="525" y="190" width="109" height="28" as="geometry" />
+                </mxCell>
+                <mxCell id="SUBCONTRACT.WarrantyHoldRate" value="WarrantyHoldRate" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="634" y="190" width="130" height="28" as="geometry" />
+                </mxCell>
+                <mxCell id="SUBCONTRACT.StartDate" value="StartDate" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="764" y="190" width="81" height="28" as="geometry" />
+                </mxCell>
+                <mxCell id="SUBCONTRACT.CompletionDate" value="CompletionDate" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="845" y="190" width="116" height="28" as="geometry" />
+                </mxCell>
+                <mxCell id="T.PROJECT" value="&lt;b&gt;PROJECT&lt;/b&gt;" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#000000;fontSize=12;dashed=1;" vertex="1" parent="1">
+                    <mxGeometry x="1001" y="164" width="81" height="26" as="geometry" />
+                </mxCell>
+                <mxCell id="PROJECT.ProjectID" value="&lt;u&gt;ProjectID&lt;/u&gt;" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;dashed=1;" vertex="1" parent="1">
+                    <mxGeometry x="1001" y="190" width="81" height="28" as="geometry" />
+                </mxCell>
+                <mxCell id="e1" value="" style="exitX=0.481;exitY=1;exitDx=0;exitDy=0;entryX=0.481;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#000000;fontSize=10;" edge="1" parent="1" source="SUBCONTRACT.ProjectID" target="PROJECT.ProjectID">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="230" y="220" />
+                            <mxPoint x="230" y="240" />
+                            <mxPoint x="1040" y="240" />
+                            <mxPoint x="1040" y="220" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e2" value="" style="exitX=0.472;exitY=1;exitDx=0;exitDy=0;entryX=0.488;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#000000;fontSize=10;" edge="1" parent="1" source="SUBCONTRACT.SubcontractorID" target="SUBCONTRACTOR.SubcontractorID">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="330" y="220" />
+                            <mxPoint x="330" y="230" />
+                            <mxPoint x="20" y="230" />
+                            <mxPoint x="20" y="110" />
+                            <mxPoint x="100" y="110" />
+                            <mxPoint x="100" y="100" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="R6" name="Safety">
+        <mxGraphModel dx="1473" dy="1378" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1533" pageHeight="258" math="0" shadow="0">
+            <root>
+                <mxCell id="0" />
+                <mxCell id="1" parent="0" />
+                <mxCell id="T.SAFETY_INSPECTION" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;SAFETY_INSPECTION&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="1080" x="40" y="40" as="geometry" />
+                </mxCell>
+                <mxCell id="SAFETY_INSPECTION.InspectionID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;InspectionID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="102" x="40" y="66" as="geometry" />
+                </mxCell>
+                <mxCell id="SAFETY_INSPECTION.InspectionDate" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="InspectionDate" vertex="1">
+                    <mxGeometry height="28" width="116" x="142" y="66" as="geometry" />
+                </mxCell>
+                <mxCell id="SAFETY_INSPECTION.InspectionType" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="InspectionType" vertex="1">
+                    <mxGeometry height="28" width="116" x="258" y="66" as="geometry" />
+                </mxCell>
+                <mxCell id="SAFETY_INSPECTION.InspectionScope" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="InspectionScope" vertex="1">
+                    <mxGeometry height="28" width="123" x="374" y="66" as="geometry" />
+                </mxCell>
+                <mxCell id="SAFETY_INSPECTION.OverallScore" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="OverallScore" vertex="1">
+                    <mxGeometry height="28" width="102" x="497" y="66" as="geometry" />
+                </mxCell>
+                <mxCell id="SAFETY_INSPECTION.InspectionResult" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="InspectionResult" vertex="1">
+                    <mxGeometry height="28" width="130" x="599" y="66" as="geometry" />
+                </mxCell>
+                <mxCell id="SAFETY_INSPECTION.ViolationNoted" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="ViolationNoted" vertex="1">
+                    <mxGeometry height="28" width="116" x="729" y="66" as="geometry" />
+                </mxCell>
+                <mxCell id="SAFETY_INSPECTION.FixDeadline" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="FixDeadline" vertex="1">
+                    <mxGeometry height="28" width="95" x="845" y="66" as="geometry" />
+                </mxCell>
+                <mxCell id="SAFETY_INSPECTION.SiteID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="SiteID" vertex="1">
+                    <mxGeometry height="28" width="64" x="940" y="66" as="geometry" />
+                </mxCell>
+                <mxCell id="SAFETY_INSPECTION.InspectorEmpID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="InspectorEmpID" vertex="1">
+                    <mxGeometry height="28" width="116" x="1004" y="66" as="geometry" />
+                </mxCell>
+                <mxCell id="T.INCIDENT_REPORT" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#000000;fontSize=12;" value="&lt;b&gt;INCIDENT_REPORT&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="1038" x="40" y="164" as="geometry" />
+                </mxCell>
+                <mxCell id="INCIDENT_REPORT.IncidentID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="&lt;u&gt;IncidentID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="88" x="40" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="INCIDENT_REPORT.IncidentTimestamp" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="IncidentTimestamp" vertex="1">
+                    <mxGeometry height="28" width="137" x="128" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="INCIDENT_REPORT.IncidentType" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="IncidentType" vertex="1">
+                    <mxGeometry height="28" width="102" x="265" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="INCIDENT_REPORT.IncidentLevel" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="IncidentLevel" vertex="1">
+                    <mxGeometry height="28" width="109" x="367" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="INCIDENT_REPORT.DamageDescription" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="DamageDescription" vertex="1">
+                    <mxGeometry height="28" width="137" x="476" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="INCIDENT_REPORT.LostDays" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="LostDays" vertex="1">
+                    <mxGeometry height="28" width="74" x="613" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="INCIDENT_REPORT.Solution" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="Solution" vertex="1">
+                    <mxGeometry height="28" width="74" x="687" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="INCIDENT_REPORT.SiteID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="SiteID" vertex="1">
+                    <mxGeometry height="28" width="64" x="761" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="INCIDENT_REPORT.InvolvedEmpID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="InvolvedEmpID" vertex="1">
+                    <mxGeometry height="28" width="109" x="825" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="INCIDENT_REPORT.DamagedEquipmentID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="DamagedEquipmentID" vertex="1">
+                    <mxGeometry height="28" width="144" x="934" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="T.EMPLOYEE" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#000000;fontSize=12;dashed=1;" value="&lt;b&gt;EMPLOYEE&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="84" x="1118" y="164" as="geometry" />
+                </mxCell>
+                <mxCell id="EMPLOYEE.EmpID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;dashed=1;" value="&lt;u&gt;EmpID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="84" x="1118" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="T.EQUIPMENT" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffe6cc;strokeColor=#000000;fontSize=12;dashed=1;" value="&lt;b&gt;EQUIPMENT&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="95" x="1242" y="164" as="geometry" />
+                </mxCell>
+                <mxCell id="EQUIPMENT.EquipmentID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;dashed=1;" value="&lt;u&gt;EquipmentID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="95" x="1242" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="T.PROJECT_SITE" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#000000;fontSize=12;dashed=1;" value="&lt;b&gt;PROJECT_SITE&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="26" width="116" x="1377" y="164" as="geometry" />
+                </mxCell>
+                <mxCell id="PROJECT_SITE.SiteID" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=11;dashed=1;" value="&lt;u&gt;SiteID&lt;/u&gt;" vertex="1">
+                    <mxGeometry height="28" width="116" x="1377" y="190" as="geometry" />
+                </mxCell>
+                <mxCell id="e1" edge="1" parent="1" source="SAFETY_INSPECTION.SiteID" style="exitX=0.469;exitY=1;exitDx=0;exitDy=0;entryX=0.284;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#000000;fontSize=10;" target="PROJECT_SITE.SiteID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="970" y="100" />
+                            <mxPoint x="970" y="130" />
+                            <mxPoint x="1350" y="130" />
+                            <mxPoint x="1350" y="230" />
+                            <mxPoint x="1410" y="230" />
+                            <mxPoint x="1410" y="220" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e2" edge="1" parent="1" source="SAFETY_INSPECTION.InspectorEmpID" style="exitX=0.483;exitY=1;exitDx=0;exitDy=0;entryX=0.262;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#000000;fontSize=10;" target="EMPLOYEE.EmpID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1060" y="100" />
+                            <mxPoint x="1060" y="140" />
+                            <mxPoint x="1100" y="140" />
+                            <mxPoint x="1100" y="240" />
+                            <mxPoint x="1140" y="240" />
+                            <mxPoint x="1140" y="220" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e3" edge="1" parent="1" source="INCIDENT_REPORT.SiteID" style="exitX=0.453;exitY=1;exitDx=0;exitDy=0;entryX=0.457;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#000000;fontSize=10;" target="PROJECT_SITE.SiteID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="790" y="220" />
+                            <mxPoint x="790" y="260" />
+                            <mxPoint x="1430" y="260" />
+                            <mxPoint x="1430" y="220" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e4" edge="1" parent="1" source="INCIDENT_REPORT.InvolvedEmpID" style="exitX=0.413;exitY=1;exitDx=0;exitDy=0;entryX=0.500;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#000000;fontSize=10;" target="EMPLOYEE.EmpID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="870" y="220" />
+                            <mxPoint x="870" y="230" />
+                            <mxPoint x="1160" y="230" />
+                            <mxPoint x="1160" y="220" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e5" edge="1" parent="1" source="INCIDENT_REPORT.DamagedEquipmentID" style="exitX=0.458;exitY=1;exitDx=0;exitDy=0;entryX=0.400;entryY=1;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=classic;endFill=1;strokeColor=#000000;fontSize=10;" target="EQUIPMENT.EquipmentID" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1000" y="220" />
+                            <mxPoint x="1000" y="250" />
+                            <mxPoint x="1280" y="250" />
+                            <mxPoint x="1280" y="220" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
