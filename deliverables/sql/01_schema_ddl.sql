@@ -1,0 +1,573 @@
+-- =============================================================================
+-- DATABASE DESIGN TERM PROJECT (PHASE 3) - E24-Class 5, Group 5
+-- Topic: Multi-Project Construction Enterprise Database System (A34Build)
+-- Target DBMS: MySQL 8.0+ (Storage Engine: InnoDB, Charset: utf8mb4)
+-- File 01: Data Definition Language (DDL) - Relational Schema (3NF Compliant)
+-- =============================================================================
+
+DROP DATABASE IF EXISTS A34Build_DB;
+CREATE DATABASE A34Build_DB
+  CHARACTER SET utf8mb4
+  COLLATE utf8mb4_unicode_ci;
+
+USE A34Build_DB;
+
+-- =============================================================================
+-- SUBSYSTEM 1: ORGANIZATION & HUMAN RESOURCES (HR)
+-- =============================================================================
+
+-- 1. Table: DEPARTMENT
+-- Note: HeadEmpID FK is added via ALTER TABLE later due to circular dependency with EMPLOYEE.
+CREATE TABLE DEPARTMENT (
+    DeptID VARCHAR(10) NOT NULL,
+    DeptName VARCHAR(100) NOT NULL,
+    OfficeLocation VARCHAR(255) NOT NULL,
+    Budget DECIMAL(15,2) NOT NULL DEFAULT 0.00,
+    HeadEmpID VARCHAR(10) NULL,
+    CONSTRAINT PK_DEPARTMENT PRIMARY KEY (DeptID),
+    CONSTRAINT UQ_DEPARTMENT_DeptName UNIQUE (DeptName),
+    CONSTRAINT UQ_DEPARTMENT_HeadEmpID UNIQUE (HeadEmpID),
+    CONSTRAINT CK_DEPARTMENT_Budget CHECK (Budget >= 0)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- 2. Table: EMPLOYEE
+CREATE TABLE EMPLOYEE (
+    EmpID VARCHAR(10) NOT NULL,
+    FirstName VARCHAR(50) NOT NULL,
+    MiddleName VARCHAR(50) NULL,
+    LastName VARCHAR(50) NOT NULL,
+    Street VARCHAR(150) NOT NULL,
+    Ward VARCHAR(100) NOT NULL,
+    District VARCHAR(100) NOT NULL,
+    City VARCHAR(100) NOT NULL,
+    DOB DATE NOT NULL,
+    HireDate DATE NOT NULL,
+    Salary DECIMAL(12,2) NOT NULL,
+    JobTitle VARCHAR(100) NOT NULL,
+    Email VARCHAR(150) NOT NULL,
+    DeptID VARCHAR(10) NOT NULL,
+    SupervisorID VARCHAR(10) NULL,
+    CONSTRAINT PK_EMPLOYEE PRIMARY KEY (EmpID),
+    CONSTRAINT UQ_EMPLOYEE_Email UNIQUE (Email),
+    CONSTRAINT CK_EMPLOYEE_Salary CHECK (Salary > 0),
+    CONSTRAINT CK_EMPLOYEE_HireDate CHECK (HireDate >= DOB),
+    CONSTRAINT FK_EMPLOYEE_DeptID FOREIGN KEY (DeptID) 
+        REFERENCES DEPARTMENT (DeptID) 
+        ON UPDATE CASCADE ON DELETE RESTRICT,
+    CONSTRAINT FK_EMPLOYEE_SupervisorID FOREIGN KEY (SupervisorID) 
+        REFERENCES EMPLOYEE (EmpID) 
+        ON UPDATE CASCADE ON DELETE SET NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- Resolve circular FK from DEPARTMENT to EMPLOYEE
+ALTER TABLE DEPARTMENT
+    ADD CONSTRAINT FK_DEPARTMENT_HeadEmpID FOREIGN KEY (HeadEmpID)
+    REFERENCES EMPLOYEE (EmpID)
+    ON UPDATE CASCADE ON DELETE SET NULL;
+
+-- 3. Table: EMPLOYEE_PHONE (Multivalued Attribute)
+CREATE TABLE EMPLOYEE_PHONE (
+    EmpID VARCHAR(10) NOT NULL,
+    PhoneNumber VARCHAR(20) NOT NULL,
+    CONSTRAINT PK_EMPLOYEE_PHONE PRIMARY KEY (EmpID, PhoneNumber),
+    CONSTRAINT FK_EMPLOYEE_PHONE_EmpID FOREIGN KEY (EmpID)
+        REFERENCES EMPLOYEE (EmpID)
+        ON UPDATE CASCADE ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- 4. Table: EMPLOYEE_CERTIFICATION (Multivalued Attribute)
+CREATE TABLE EMPLOYEE_CERTIFICATION (
+    EmpID VARCHAR(10) NOT NULL,
+    Certification VARCHAR(150) NOT NULL,
+    CONSTRAINT PK_EMPLOYEE_CERTIFICATION PRIMARY KEY (EmpID, Certification),
+    CONSTRAINT FK_EMPLOYEE_CERTIFICATION_EmpID FOREIGN KEY (EmpID)
+        REFERENCES EMPLOYEE (EmpID)
+        ON UPDATE CASCADE ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- 5. Table: DEPENDENT (Weak Entity dependent on EMPLOYEE)
+CREATE TABLE DEPENDENT (
+    EmpID VARCHAR(10) NOT NULL,
+    DependentName VARCHAR(100) NOT NULL,
+    Relationship VARCHAR(50) NOT NULL,
+    Gender ENUM('Male', 'Female', 'Other') NOT NULL,
+    DOB DATE NOT NULL,
+    IsEmergencyContact BOOLEAN NOT NULL DEFAULT FALSE,
+    CONSTRAINT PK_DEPENDENT PRIMARY KEY (EmpID, DependentName),
+    CONSTRAINT FK_DEPENDENT_EmpID FOREIGN KEY (EmpID)
+        REFERENCES EMPLOYEE (EmpID)
+        ON UPDATE CASCADE ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- =============================================================================
+-- SUBSYSTEM 2: CLIENT & PROJECT MANAGEMENT
+-- =============================================================================
+
+-- 6. Table: CLIENT
+CREATE TABLE CLIENT (
+    ClientID VARCHAR(10) NOT NULL,
+    ClientName VARCHAR(150) NOT NULL,
+    TaxCode VARCHAR(20) NOT NULL,
+    RepresentativeName VARCHAR(100) NOT NULL,
+    Email VARCHAR(150) NOT NULL,
+    Street VARCHAR(150) NOT NULL,
+    Ward VARCHAR(100) NOT NULL,
+    District VARCHAR(100) NOT NULL,
+    City VARCHAR(100) NOT NULL,
+    CONSTRAINT PK_CLIENT PRIMARY KEY (ClientID),
+    CONSTRAINT UQ_CLIENT_TaxCode UNIQUE (TaxCode),
+    CONSTRAINT UQ_CLIENT_Email UNIQUE (Email)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- 7. Table: CLIENT_PHONE (Multivalued Attribute)
+CREATE TABLE CLIENT_PHONE (
+    ClientID VARCHAR(10) NOT NULL,
+    ContactPhone VARCHAR(20) NOT NULL,
+    CONSTRAINT PK_CLIENT_PHONE PRIMARY KEY (ClientID, ContactPhone),
+    CONSTRAINT FK_CLIENT_PHONE_ClientID FOREIGN KEY (ClientID)
+        REFERENCES CLIENT (ClientID)
+        ON UPDATE CASCADE ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- 8. Table: PROJECT
+CREATE TABLE PROJECT (
+    ProjectID VARCHAR(10) NOT NULL,
+    ProjectName VARCHAR(200) NOT NULL,
+    ContractNumber VARCHAR(50) NOT NULL,
+    EstimatedBudget DECIMAL(15,2) NOT NULL,
+    ActualCost DECIMAL(15,2) NOT NULL DEFAULT 0.00,
+    StartDate DATE NOT NULL,
+    ScheduledEndDate DATE NOT NULL,
+    ActualEndDate DATE NULL,
+    Status ENUM('Planning', 'Active', 'Suspended', 'Completed', 'Cancelled') NOT NULL DEFAULT 'Planning',
+    ClientID VARCHAR(10) NOT NULL,
+    DeptID VARCHAR(10) NOT NULL,
+    DirectorEmpID VARCHAR(10) NOT NULL,
+    CONSTRAINT PK_PROJECT PRIMARY KEY (ProjectID),
+    CONSTRAINT UQ_PROJECT_ProjectName UNIQUE (ProjectName),
+    CONSTRAINT UQ_PROJECT_ContractNumber UNIQUE (ContractNumber),
+    CONSTRAINT CK_PROJECT_Dates CHECK (ScheduledEndDate >= StartDate),
+    CONSTRAINT CK_PROJECT_ActualDates CHECK (ActualEndDate IS NULL OR ActualEndDate >= StartDate),
+    CONSTRAINT CK_PROJECT_Budget CHECK (EstimatedBudget >= 0 AND ActualCost >= 0),
+    CONSTRAINT FK_PROJECT_ClientID FOREIGN KEY (ClientID)
+        REFERENCES CLIENT (ClientID)
+        ON UPDATE CASCADE ON DELETE RESTRICT,
+    CONSTRAINT FK_PROJECT_DeptID FOREIGN KEY (DeptID)
+        REFERENCES DEPARTMENT (DeptID)
+        ON UPDATE CASCADE ON DELETE RESTRICT,
+    CONSTRAINT FK_PROJECT_DirectorEmpID FOREIGN KEY (DirectorEmpID)
+        REFERENCES EMPLOYEE (EmpID)
+        ON UPDATE CASCADE ON DELETE RESTRICT
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- 9. Table: PROJECT_SITE
+CREATE TABLE PROJECT_SITE (
+    SiteID VARCHAR(10) NOT NULL,
+    SiteName VARCHAR(150) NOT NULL,
+    Street VARCHAR(150) NOT NULL,
+    Ward VARCHAR(100) NOT NULL,
+    District VARCHAR(100) NOT NULL,
+    City VARCHAR(100) NOT NULL,
+    Latitude DECIMAL(10,8) NOT NULL,
+    Longitude DECIMAL(11,8) NOT NULL,
+    ProjectID VARCHAR(10) NOT NULL,
+    CONSTRAINT PK_PROJECT_SITE PRIMARY KEY (SiteID),
+    CONSTRAINT UQ_PROJECT_SITE_Project_SiteName UNIQUE (ProjectID, SiteName),
+    CONSTRAINT UQ_PROJECT_SITE_Coordinates UNIQUE (Latitude, Longitude),
+    CONSTRAINT CK_PROJECT_SITE_Lat CHECK (Latitude BETWEEN -90.0 AND 90.0),
+    CONSTRAINT CK_PROJECT_SITE_Long CHECK (Longitude BETWEEN -180.0 AND 180.0),
+    CONSTRAINT FK_PROJECT_SITE_ProjectID FOREIGN KEY (ProjectID)
+        REFERENCES PROJECT (ProjectID)
+        ON UPDATE CASCADE ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- 10. Table: PROJECT_PHASE (Weak Entity dependent on PROJECT)
+CREATE TABLE PROJECT_PHASE (
+    ProjectID VARCHAR(10) NOT NULL,
+    PhaseNumber INT NOT NULL,
+    PhaseName VARCHAR(100) NOT NULL,
+    PhaseBudget DECIMAL(15,2) NOT NULL DEFAULT 0.00,
+    StartDate DATE NOT NULL,
+    ScheduledEndDate DATE NOT NULL,
+    ActualEndDate DATE NULL,
+    Status ENUM('Pending', 'In-Progress', 'Completed', 'Delayed') NOT NULL DEFAULT 'Pending',
+    ProgressPercentage DECIMAL(5,2) NOT NULL DEFAULT 0.00,
+    CONSTRAINT PK_PROJECT_PHASE PRIMARY KEY (ProjectID, PhaseNumber),
+    CONSTRAINT CK_PROJECT_PHASE_PhaseNumber CHECK (PhaseNumber > 0),
+    CONSTRAINT CK_PROJECT_PHASE_Dates CHECK (ScheduledEndDate >= StartDate),
+    CONSTRAINT CK_PROJECT_PHASE_ActualDates CHECK (ActualEndDate IS NULL OR ActualEndDate >= StartDate),
+    CONSTRAINT CK_PROJECT_PHASE_Budget CHECK (PhaseBudget >= 0),
+    CONSTRAINT CK_PROJECT_PHASE_Progress CHECK (ProgressPercentage BETWEEN 0.00 AND 100.00),
+    CONSTRAINT FK_PROJECT_PHASE_ProjectID FOREIGN KEY (ProjectID)
+        REFERENCES PROJECT (ProjectID)
+        ON UPDATE CASCADE ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- 11. Table: TASK
+CREATE TABLE TASK (
+    TaskID VARCHAR(10) NOT NULL,
+    TaskName VARCHAR(150) NOT NULL,
+    Description TEXT NULL,
+    EstimatedCost DECIMAL(15,2) NOT NULL DEFAULT 0.00,
+    ActualCost DECIMAL(15,2) NOT NULL DEFAULT 0.00,
+    StartDate DATE NOT NULL,
+    EndDate DATE NOT NULL,
+    Status ENUM('Not-Started', 'In-Progress', 'Completed', 'Blocked') NOT NULL DEFAULT 'Not-Started',
+    ProjectID VARCHAR(10) NOT NULL,
+    PhaseNumber INT NOT NULL,
+    CONSTRAINT PK_TASK PRIMARY KEY (TaskID),
+    CONSTRAINT UQ_TASK_Phase_TaskName UNIQUE (ProjectID, PhaseNumber, TaskName),
+    CONSTRAINT CK_TASK_Dates CHECK (EndDate >= StartDate),
+    CONSTRAINT CK_TASK_Costs CHECK (EstimatedCost >= 0 AND ActualCost >= 0),
+    CONSTRAINT FK_TASK_Phase FOREIGN KEY (ProjectID, PhaseNumber)
+        REFERENCES PROJECT_PHASE (ProjectID, PhaseNumber)
+        ON UPDATE CASCADE ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- 12. Table: PRECEDES (Recursive M:N relationship on TASK)
+CREATE TABLE PRECEDES (
+    PredecessorTaskID VARCHAR(10) NOT NULL,
+    SuccessorTaskID VARCHAR(10) NOT NULL,
+    CONSTRAINT PK_PRECEDES PRIMARY KEY (PredecessorTaskID, SuccessorTaskID),
+    -- Note: Self-loop (PredecessorTaskID <> SuccessorTaskID) is enforced via TRG_CHECK_PRECEDES_DAG
+    -- because MySQL 8.0 forbids CHECK constraints on columns used in FK referential actions (Error 3823).
+    CONSTRAINT FK_PRECEDES_Predecessor FOREIGN KEY (PredecessorTaskID)
+        REFERENCES TASK (TaskID)
+        ON UPDATE CASCADE ON DELETE RESTRICT,
+    CONSTRAINT FK_PRECEDES_Successor FOREIGN KEY (SuccessorTaskID)
+        REFERENCES TASK (TaskID)
+        ON UPDATE CASCADE ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- 13. Table: WORKS_ON_TASK (M:N Relationship between EMPLOYEE and TASK)
+CREATE TABLE WORKS_ON_TASK (
+    EmpID VARCHAR(10) NOT NULL,
+    TaskID VARCHAR(10) NOT NULL,
+    HoursLogged DECIMAL(5,2) NOT NULL DEFAULT 0.00,
+    RoleDescription VARCHAR(100) NOT NULL,
+    AssignedDate DATE NOT NULL,
+    CONSTRAINT PK_WORKS_ON_TASK PRIMARY KEY (EmpID, TaskID),
+    CONSTRAINT CK_WORKS_ON_TASK_Hours CHECK (HoursLogged >= 0.00 AND HoursLogged <= 24.00),
+    CONSTRAINT FK_WORKS_ON_TASK_EmpID FOREIGN KEY (EmpID)
+        REFERENCES EMPLOYEE (EmpID)
+        ON UPDATE CASCADE ON DELETE RESTRICT,
+    CONSTRAINT FK_WORKS_ON_TASK_TaskID FOREIGN KEY (TaskID)
+        REFERENCES TASK (TaskID)
+        ON UPDATE CASCADE ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- =============================================================================
+-- SUBSYSTEM 3: HEAVY MACHINERY & EQUIPMENT MANAGEMENT
+-- =============================================================================
+
+-- 14. Table: EQUIPMENT
+CREATE TABLE EQUIPMENT (
+    EquipmentID VARCHAR(10) NOT NULL,
+    SerialNumber VARCHAR(50) NOT NULL,
+    EquipmentName VARCHAR(150) NOT NULL,
+    Category VARCHAR(100) NOT NULL,
+    Capacity VARCHAR(50) NOT NULL,
+    HourlyRate DECIMAL(10,2) NOT NULL,
+    Status ENUM('Available', 'Deployed', 'Under-Maintenance', 'Decommissioned') NOT NULL DEFAULT 'Available',
+    TotalRunHours DECIMAL(10,2) NOT NULL DEFAULT 0.00,
+    CONSTRAINT PK_EQUIPMENT PRIMARY KEY (EquipmentID),
+    CONSTRAINT UQ_EQUIPMENT_SerialNumber UNIQUE (SerialNumber),
+    CONSTRAINT CK_EQUIPMENT_HourlyRate CHECK (HourlyRate >= 0),
+    CONSTRAINT CK_EQUIPMENT_TotalRunHours CHECK (TotalRunHours >= 0)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- 15. Table: MAINTENANCE_RECORD (Weak Entity dependent on EQUIPMENT)
+CREATE TABLE MAINTENANCE_RECORD (
+    EquipmentID VARCHAR(10) NOT NULL,
+    RecordNumber INT NOT NULL,
+    MaintenanceDate DATE NOT NULL,
+    MaintenanceType ENUM('Routine', 'Preventive', 'Corrective', 'Emergency') NOT NULL,
+    Description TEXT NOT NULL,
+    Cost DECIMAL(12,2) NOT NULL DEFAULT 0.00,
+    PerformedBy VARCHAR(150) NOT NULL,
+    CONSTRAINT PK_MAINTENANCE_RECORD PRIMARY KEY (EquipmentID, RecordNumber),
+    CONSTRAINT CK_MAINTENANCE_RECORD_Num CHECK (RecordNumber > 0),
+    CONSTRAINT CK_MAINTENANCE_RECORD_Cost CHECK (Cost >= 0),
+    CONSTRAINT FK_MAINTENANCE_RECORD_EquipmentID FOREIGN KEY (EquipmentID)
+        REFERENCES EQUIPMENT (EquipmentID)
+        ON UPDATE CASCADE ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- 16. Table: EQUIPMENT_DEPLOYMENT (3NF Refined: Minimal PK is EquipmentID, DeploymentStartDate)
+CREATE TABLE EQUIPMENT_DEPLOYMENT (
+    EquipmentID VARCHAR(10) NOT NULL,
+    DeploymentStartDate DATE NOT NULL,
+    DeploymentEndDate DATE NOT NULL,
+    OperatingHours DECIMAL(8,2) NOT NULL DEFAULT 0.00,
+    SiteID VARCHAR(10) NOT NULL,
+    OperatorEmpID VARCHAR(10) NOT NULL,
+    CONSTRAINT PK_EQUIPMENT_DEPLOYMENT PRIMARY KEY (EquipmentID, DeploymentStartDate),
+    CONSTRAINT CK_EQUIPMENT_DEPLOYMENT_Dates CHECK (DeploymentEndDate >= DeploymentStartDate),
+    CONSTRAINT CK_EQUIPMENT_DEPLOYMENT_Hours CHECK (OperatingHours >= 0),
+    CONSTRAINT FK_EQUIPMENT_DEPLOYMENT_EquipmentID FOREIGN KEY (EquipmentID)
+        REFERENCES EQUIPMENT (EquipmentID)
+        ON UPDATE CASCADE ON DELETE RESTRICT,
+    CONSTRAINT FK_EQUIPMENT_DEPLOYMENT_SiteID FOREIGN KEY (SiteID)
+        REFERENCES PROJECT_SITE (SiteID)
+        ON UPDATE CASCADE ON DELETE RESTRICT,
+    CONSTRAINT FK_EQUIPMENT_DEPLOYMENT_OperatorEmpID FOREIGN KEY (OperatorEmpID)
+        REFERENCES EMPLOYEE (EmpID)
+        ON UPDATE CASCADE ON DELETE RESTRICT
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- =============================================================================
+-- SUBSYSTEM 4: PROCUREMENT, INVENTORY & MATERIALS
+-- =============================================================================
+
+-- 17. Table: SUPPLIER
+CREATE TABLE SUPPLIER (
+    SupplierID VARCHAR(10) NOT NULL,
+    SupplierName VARCHAR(150) NOT NULL,
+    TaxCode VARCHAR(20) NOT NULL,
+    Email VARCHAR(150) NOT NULL,
+    Street VARCHAR(150) NOT NULL,
+    Ward VARCHAR(100) NOT NULL,
+    District VARCHAR(100) NOT NULL,
+    City VARCHAR(100) NOT NULL,
+    CONSTRAINT PK_SUPPLIER PRIMARY KEY (SupplierID),
+    CONSTRAINT UQ_SUPPLIER_TaxCode UNIQUE (TaxCode),
+    CONSTRAINT UQ_SUPPLIER_Email UNIQUE (Email)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- 18. Table: SUPPLIER_PHONE (Multivalued Attribute)
+CREATE TABLE SUPPLIER_PHONE (
+    SupplierID VARCHAR(10) NOT NULL,
+    ContactPhone VARCHAR(20) NOT NULL,
+    CONSTRAINT PK_SUPPLIER_PHONE PRIMARY KEY (SupplierID, ContactPhone),
+    CONSTRAINT FK_SUPPLIER_PHONE_SupplierID FOREIGN KEY (SupplierID)
+        REFERENCES SUPPLIER (SupplierID)
+        ON UPDATE CASCADE ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- 19. Table: SUPPLIER_CATEGORY (Multivalued Attribute)
+CREATE TABLE SUPPLIER_CATEGORY (
+    SupplierID VARCHAR(10) NOT NULL,
+    SupplyCategory VARCHAR(100) NOT NULL,
+    CONSTRAINT PK_SUPPLIER_CATEGORY PRIMARY KEY (SupplierID, SupplyCategory),
+    CONSTRAINT FK_SUPPLIER_CATEGORY_SupplierID FOREIGN KEY (SupplierID)
+        REFERENCES SUPPLIER (SupplierID)
+        ON UPDATE CASCADE ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- 20. Table: MATERIAL
+CREATE TABLE MATERIAL (
+    MaterialID VARCHAR(10) NOT NULL,
+    MaterialName VARCHAR(150) NOT NULL,
+    Unit VARCHAR(30) NOT NULL,
+    StandardPrice DECIMAL(12,2) NOT NULL,
+    CONSTRAINT PK_MATERIAL PRIMARY KEY (MaterialID),
+    CONSTRAINT UQ_MATERIAL_MaterialName UNIQUE (MaterialName),
+    CONSTRAINT CK_MATERIAL_StandardPrice CHECK (StandardPrice >= 0)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- 21. Table: PURCHASE_ORDER
+CREATE TABLE PURCHASE_ORDER (
+    PO_ID VARCHAR(10) NOT NULL,
+    OrderDate DATE NOT NULL,
+    TotalAmount DECIMAL(15,2) NOT NULL DEFAULT 0.00,
+    Status ENUM('Draft', 'Approved', 'Shipped', 'Received', 'Cancelled') NOT NULL DEFAULT 'Draft',
+    ProjectID VARCHAR(10) NOT NULL,
+    SupplierID VARCHAR(10) NOT NULL,
+    CONSTRAINT PK_PURCHASE_ORDER PRIMARY KEY (PO_ID),
+    CONSTRAINT CK_PURCHASE_ORDER_TotalAmount CHECK (TotalAmount >= 0),
+    CONSTRAINT FK_PURCHASE_ORDER_ProjectID FOREIGN KEY (ProjectID)
+        REFERENCES PROJECT (ProjectID)
+        ON UPDATE CASCADE ON DELETE RESTRICT,
+    CONSTRAINT FK_PURCHASE_ORDER_SupplierID FOREIGN KEY (SupplierID)
+        REFERENCES SUPPLIER (SupplierID)
+        ON UPDATE CASCADE ON DELETE RESTRICT
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- 22. Table: PO_ITEM (Weak Entity dependent on PURCHASE_ORDER)
+CREATE TABLE PO_ITEM (
+    PO_ID VARCHAR(10) NOT NULL,
+    LineNumber INT NOT NULL,
+    OrderQuantity DECIMAL(12,2) NOT NULL,
+    UnitPrice DECIMAL(12,2) NOT NULL,
+    MaterialID VARCHAR(10) NOT NULL,
+    CONSTRAINT PK_PO_ITEM PRIMARY KEY (PO_ID, LineNumber),
+    CONSTRAINT UQ_PO_ITEM_PO_Material UNIQUE (PO_ID, MaterialID),
+    CONSTRAINT CK_PO_ITEM_LineNumber CHECK (LineNumber > 0),
+    CONSTRAINT CK_PO_ITEM_Quantity CHECK (OrderQuantity > 0),
+    CONSTRAINT CK_PO_ITEM_UnitPrice CHECK (UnitPrice >= 0),
+    CONSTRAINT FK_PO_ITEM_PO_ID FOREIGN KEY (PO_ID)
+        REFERENCES PURCHASE_ORDER (PO_ID)
+        ON UPDATE CASCADE ON DELETE CASCADE,
+    CONSTRAINT FK_PO_ITEM_MaterialID FOREIGN KEY (MaterialID)
+        REFERENCES MATERIAL (MaterialID)
+        ON UPDATE CASCADE ON DELETE RESTRICT
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- 23. Table: SITE_INVENTORY (Composite entity representing Material Stock at Project Sites)
+CREATE TABLE SITE_INVENTORY (
+    SiteID VARCHAR(10) NOT NULL,
+    MaterialID VARCHAR(10) NOT NULL,
+    CurrentStockQuantity DECIMAL(12,2) NOT NULL DEFAULT 0.00,
+    MinStock DECIMAL(12,2) NOT NULL DEFAULT 0.00,
+    ReorderQuantity DECIMAL(12,2) NOT NULL DEFAULT 0.00,
+    CONSTRAINT PK_SITE_INVENTORY PRIMARY KEY (SiteID, MaterialID),
+    CONSTRAINT CK_SITE_INVENTORY_Stock CHECK (CurrentStockQuantity >= 0),
+    CONSTRAINT CK_SITE_INVENTORY_MinStock CHECK (MinStock >= 0),
+    CONSTRAINT CK_SITE_INVENTORY_Reorder CHECK (ReorderQuantity >= 0),
+    CONSTRAINT FK_SITE_INVENTORY_SiteID FOREIGN KEY (SiteID)
+        REFERENCES PROJECT_SITE (SiteID)
+        ON UPDATE CASCADE ON DELETE CASCADE,
+    CONSTRAINT FK_SITE_INVENTORY_MaterialID FOREIGN KEY (MaterialID)
+        REFERENCES MATERIAL (MaterialID)
+        ON UPDATE CASCADE ON DELETE RESTRICT
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- 24. Table: DELIVERY_DISPATCH (3NF Refined: Supplier resolved via PO_ID)
+CREATE TABLE DELIVERY_DISPATCH (
+    DeliveryCode VARCHAR(20) NOT NULL,
+    DeliveryDate DATE NOT NULL,
+    DeliveredQuantity DECIMAL(12,2) NOT NULL,
+    Status ENUM('In-Transit', 'Received', 'Rejected') NOT NULL DEFAULT 'Received',
+    MaterialID VARCHAR(10) NOT NULL,
+    SiteID VARCHAR(10) NOT NULL,
+    ReceivedByEmpID VARCHAR(10) NOT NULL,
+    PO_ID VARCHAR(10) NOT NULL,
+    CONSTRAINT PK_DELIVERY_DISPATCH PRIMARY KEY (DeliveryCode),
+    CONSTRAINT CK_DELIVERY_DISPATCH_Quantity CHECK (DeliveredQuantity > 0),
+    CONSTRAINT FK_DELIVERY_DISPATCH_MaterialID FOREIGN KEY (MaterialID)
+        REFERENCES MATERIAL (MaterialID)
+        ON UPDATE CASCADE ON DELETE RESTRICT,
+    CONSTRAINT FK_DELIVERY_DISPATCH_SiteID FOREIGN KEY (SiteID)
+        REFERENCES PROJECT_SITE (SiteID)
+        ON UPDATE CASCADE ON DELETE RESTRICT,
+    CONSTRAINT FK_DELIVERY_DISPATCH_ReceivedBy FOREIGN KEY (ReceivedByEmpID)
+        REFERENCES EMPLOYEE (EmpID)
+        ON UPDATE CASCADE ON DELETE RESTRICT,
+    CONSTRAINT FK_DELIVERY_DISPATCH_PO_ID FOREIGN KEY (PO_ID)
+        REFERENCES PURCHASE_ORDER (PO_ID)
+        ON UPDATE CASCADE ON DELETE RESTRICT
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- 25. Table: MATERIAL_USAGE (Tracks Consumption per Task on Site)
+CREATE TABLE MATERIAL_USAGE (
+    TaskID VARCHAR(10) NOT NULL,
+    MaterialID VARCHAR(10) NOT NULL,
+    SiteID VARCHAR(10) NOT NULL,
+    UsageDate DATE NOT NULL,
+    UsedQuantity DECIMAL(12,2) NOT NULL,
+    CONSTRAINT PK_MATERIAL_USAGE PRIMARY KEY (TaskID, MaterialID, SiteID, UsageDate),
+    CONSTRAINT CK_MATERIAL_USAGE_Quantity CHECK (UsedQuantity > 0),
+    CONSTRAINT FK_MATERIAL_USAGE_TaskID FOREIGN KEY (TaskID)
+        REFERENCES TASK (TaskID)
+        ON UPDATE CASCADE ON DELETE CASCADE,
+    CONSTRAINT FK_MATERIAL_USAGE_Inventory FOREIGN KEY (SiteID, MaterialID)
+        REFERENCES SITE_INVENTORY (SiteID, MaterialID)
+        ON UPDATE CASCADE ON DELETE RESTRICT
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- =============================================================================
+-- SUBSYSTEM 5: SUBCONTRACTORS & SITE SAFETY ASSURANCE
+-- =============================================================================
+
+-- 26. Table: SUBCONTRACTOR
+CREATE TABLE SUBCONTRACTOR (
+    SubcontractorID VARCHAR(10) NOT NULL,
+    SubcontractorName VARCHAR(150) NOT NULL,
+    TaxCode VARCHAR(20) NOT NULL,
+    Specialization VARCHAR(100) NOT NULL,
+    ContactPerson VARCHAR(100) NOT NULL,
+    ContactPhone VARCHAR(20) NOT NULL,
+    ContactEmail VARCHAR(150) NOT NULL,
+    LicenseNumber VARCHAR(50) NOT NULL,
+    CONSTRAINT PK_SUBCONTRACTOR PRIMARY KEY (SubcontractorID),
+    CONSTRAINT UQ_SUBCONTRACTOR_TaxCode UNIQUE (TaxCode),
+    CONSTRAINT UQ_SUBCONTRACTOR_License UNIQUE (LicenseNumber)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- 27. Table: SUBCONTRACT
+CREATE TABLE SUBCONTRACT (
+    ContractAgreementNo VARCHAR(50) NOT NULL,
+    ScopeOfWork TEXT NOT NULL,
+    ContractValue DECIMAL(15,2) NOT NULL,
+    StartDate DATE NOT NULL,
+    EndDate DATE NOT NULL,
+    WarrantyHoldRate DECIMAL(4,2) NOT NULL DEFAULT 5.00,
+    ProjectID VARCHAR(10) NOT NULL,
+    SubcontractorID VARCHAR(10) NOT NULL,
+    CONSTRAINT PK_SUBCONTRACT PRIMARY KEY (ContractAgreementNo),
+    CONSTRAINT CK_SUBCONTRACT_Dates CHECK (EndDate >= StartDate),
+    CONSTRAINT CK_SUBCONTRACT_Value CHECK (ContractValue >= 0),
+    CONSTRAINT CK_SUBCONTRACT_WarrantyHold CHECK (WarrantyHoldRate BETWEEN 0.00 AND 100.00),
+    CONSTRAINT FK_SUBCONTRACT_ProjectID FOREIGN KEY (ProjectID)
+        REFERENCES PROJECT (ProjectID)
+        ON UPDATE CASCADE ON DELETE RESTRICT,
+    CONSTRAINT FK_SUBCONTRACT_SubcontractorID FOREIGN KEY (SubcontractorID)
+        REFERENCES SUBCONTRACTOR (SubcontractorID)
+        ON UPDATE CASCADE ON DELETE RESTRICT
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- 28. Table: SAFETY_INSPECTION
+CREATE TABLE SAFETY_INSPECTION (
+    InspectionID VARCHAR(20) NOT NULL,
+    InspectionDate DATE NOT NULL,
+    InspectionType ENUM('Daily', 'Weekly', 'Monthly', 'Surprise', 'Post-Incident') NOT NULL,
+    InspectionScope VARCHAR(200) NOT NULL,
+    OverallScore DECIMAL(5,2) NOT NULL,
+    InspectionResult ENUM('Pass', 'Conditional-Pass', 'Fail') NOT NULL,
+    ViolationNoted TEXT NULL,
+    FixDeadline DATE NULL,
+    SiteID VARCHAR(10) NOT NULL,
+    InspectorEmpID VARCHAR(10) NOT NULL,
+    CONSTRAINT PK_SAFETY_INSPECTION PRIMARY KEY (InspectionID),
+    CONSTRAINT CK_SAFETY_INSPECTION_Score CHECK (OverallScore BETWEEN 0.00 AND 100.00),
+    CONSTRAINT FK_SAFETY_INSPECTION_SiteID FOREIGN KEY (SiteID)
+        REFERENCES PROJECT_SITE (SiteID)
+        ON UPDATE CASCADE ON DELETE CASCADE,
+    CONSTRAINT FK_SAFETY_INSPECTION_Inspector FOREIGN KEY (InspectorEmpID)
+        REFERENCES EMPLOYEE (EmpID)
+        ON UPDATE CASCADE ON DELETE RESTRICT
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- 29. Table: INCIDENT_REPORT
+CREATE TABLE INCIDENT_REPORT (
+    IncidentID VARCHAR(20) NOT NULL,
+    IncidentTimestamp DATETIME NOT NULL,
+    IncidentType ENUM('Near-Miss', 'Minor-Injury', 'Major-Injury', 'Fatality', 'Equipment-Damage', 'Fire', 'Collapse') NOT NULL,
+    IncidentLevel ENUM('Level-1', 'Level-2', 'Level-3', 'Level-4') NOT NULL,
+    DamageDescription TEXT NOT NULL,
+    LostDays INT NOT NULL DEFAULT 0,
+    Solution TEXT NOT NULL,
+    SiteID VARCHAR(10) NOT NULL,
+    InvolvedEmpID VARCHAR(10) NULL,
+    DamagedEquipmentID VARCHAR(10) NULL,
+    CONSTRAINT PK_INCIDENT_REPORT PRIMARY KEY (IncidentID),
+    CONSTRAINT CK_INCIDENT_REPORT_LostDays CHECK (LostDays >= 0),
+    CONSTRAINT FK_INCIDENT_REPORT_SiteID FOREIGN KEY (SiteID)
+        REFERENCES PROJECT_SITE (SiteID)
+        ON UPDATE CASCADE ON DELETE RESTRICT,
+    CONSTRAINT FK_INCIDENT_REPORT_InvolvedEmp FOREIGN KEY (InvolvedEmpID)
+        REFERENCES EMPLOYEE (EmpID)
+        ON UPDATE CASCADE ON DELETE SET NULL,
+    CONSTRAINT FK_INCIDENT_REPORT_Equipment FOREIGN KEY (DamagedEquipmentID)
+        REFERENCES EQUIPMENT (EquipmentID)
+        ON UPDATE CASCADE ON DELETE SET NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- =============================================================================
+-- PERFORMANCE INDEXES (FOR FREQUENTLY FILTERED & JOINED FOREIGN KEYS)
+-- =============================================================================
+CREATE INDEX IDX_EMPLOYEE_DeptID ON EMPLOYEE (DeptID);
+CREATE INDEX IDX_EMPLOYEE_SupervisorID ON EMPLOYEE (SupervisorID);
+CREATE INDEX IDX_PROJECT_ClientID ON PROJECT (ClientID);
+CREATE INDEX IDX_PROJECT_DirectorEmpID ON PROJECT (DirectorEmpID);
+CREATE INDEX IDX_PROJECT_SITE_ProjectID ON PROJECT_SITE (ProjectID);
+CREATE INDEX IDX_TASK_Phase ON TASK (ProjectID, PhaseNumber);
+CREATE INDEX IDX_WORKS_ON_TASK_TaskID ON WORKS_ON_TASK (TaskID);
+CREATE INDEX IDX_EQUIPMENT_DEPLOYMENT_Site ON EQUIPMENT_DEPLOYMENT (SiteID);
+CREATE INDEX IDX_PURCHASE_ORDER_Project ON PURCHASE_ORDER (ProjectID);
+CREATE INDEX IDX_PURCHASE_ORDER_Supplier ON PURCHASE_ORDER (SupplierID);
+CREATE INDEX IDX_PO_ITEM_Material ON PO_ITEM (MaterialID);
+CREATE INDEX IDX_DELIVERY_DISPATCH_PO ON DELIVERY_DISPATCH (PO_ID);
+CREATE INDEX IDX_MATERIAL_USAGE_Inventory ON MATERIAL_USAGE (SiteID, MaterialID);
+CREATE INDEX IDX_SAFETY_INSPECTION_Site ON SAFETY_INSPECTION (SiteID);
+CREATE INDEX IDX_INCIDENT_REPORT_Site ON INCIDENT_REPORT (SiteID);
