@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="ERD2" name="ERD">
-        <mxGraphModel dx="1166" dy="275" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+        <mxGraphModel dx="628" dy="160" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -21,7 +21,7 @@
                 </object>
                 <object label="PO_&lt;wbr&gt;ITEM" erd_kind="weak" erd_name="PO_ITEM" erd_shared="" id="PO_ITEM">
                     <mxCell parent="1" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=1;" vertex="1">
-                        <mxGeometry height="60" width="160" x="3230" y="1990" as="geometry"/>
+                        <mxGeometry height="60" width="160" x="3220" y="1892.5" as="geometry"/>
                     </mxCell>
                 </object>
                 <object label="DEPENDENT" erd_kind="weak" erd_name="DEPENDENT" erd_shared="" id="DEPENDENT">
@@ -61,7 +61,7 @@
                 </object>
                 <object label="MATERIAL" erd_kind="entity" erd_name="MATERIAL" erd_shared="" id="MATERIAL">
                     <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=1;" vertex="1">
-                        <mxGeometry height="60" width="160" x="3250" y="2320" as="geometry"/>
+                        <mxGeometry height="60" width="160" x="3220" y="2316.7" as="geometry"/>
                     </mxCell>
                 </object>
                 <object label="TASK" erd_kind="entity" erd_name="TASK" erd_shared="" id="TASK">
@@ -146,7 +146,7 @@
                 </object>
                 <object label="WORKS_&lt;wbr&gt;ON_&lt;wbr&gt;TASK" erd_kind="rel" erd_name="WORKS_ON_TASK" id="WORKS_ON_TASK">
                     <mxCell parent="1" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;fontStyle=1;fontSize=10;fillColor=#d5e8d4;strokeColor=#82b366;rounded=0;strokeWidth=1;" vertex="1">
-                        <mxGeometry height="100" width="160" x="240" y="2350" as="geometry"/>
+                        <mxGeometry height="100" width="160" x="300" y="2350" as="geometry"/>
                     </mxCell>
                 </object>
                 <object label="HAS_&lt;wbr&gt;MAINTENANCE" erd_kind="idrel" erd_name="HAS_MAINTENANCE" id="HAS_MAINTENANCE">
@@ -166,12 +166,12 @@
                 </object>
                 <object label="CONTAINS_&lt;wbr&gt;ITEM" erd_kind="idrel" erd_name="CONTAINS_ITEM" id="CONTAINS_ITEM">
                     <mxCell parent="1" style="shape=rhombus;double=1;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;fontStyle=1;fontSize=10;fillColor=#e1d5e7;strokeColor=#9673a6;rounded=0;strokeWidth=1;" vertex="1">
-                        <mxGeometry height="100" width="160" x="3230" y="1510.3" as="geometry"/>
+                        <mxGeometry height="100" width="160" x="3220" y="1510.3" as="geometry"/>
                     </mxCell>
                 </object>
                 <object label="ITEM_&lt;wbr&gt;REFERENCES_&lt;wbr&gt;MATERIAL" erd_kind="rel" erd_name="ITEM_REFERENCES_MATERIAL" id="ITEM_REFERENCES_MATERIAL">
                     <mxCell parent="1" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;fontStyle=1;fontSize=10;fillColor=#e1d5e7;strokeColor=#9673a6;rounded=0;strokeWidth=1;" vertex="1">
-                        <mxGeometry height="100" width="160" x="3230" y="2094" as="geometry"/>
+                        <mxGeometry height="100" width="160" x="3220" y="2030" as="geometry"/>
                     </mxCell>
                 </object>
                 <object label="SITE_&lt;wbr&gt;INVENTORY" erd_kind="rel" erd_name="SITE_INVENTORY" id="SITE_INVENTORY">
@@ -448,17 +448,17 @@
                 </object>
                 <object label="AssignedDate" erd_kind="attr" erd_name="AssignedDate" erd_attr="simple" id="WORKS_ON_TASK.AssignedDate">
                     <mxCell parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=10;strokeWidth=1;" vertex="1">
-                        <mxGeometry height="50" width="160" x="60" y="2330" as="geometry"/>
+                        <mxGeometry height="50" width="160" x="130" y="2370" as="geometry"/>
                     </mxCell>
                 </object>
                 <object label="RoleOnTask" erd_kind="attr" erd_name="RoleOnTask" erd_attr="simple" id="WORKS_ON_TASK.RoleOnTask">
                     <mxCell parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=10;strokeWidth=1;" vertex="1">
-                        <mxGeometry height="50" width="160" x="100" y="2470" as="geometry"/>
+                        <mxGeometry height="50" width="160" x="190" y="2455" as="geometry"/>
                     </mxCell>
                 </object>
                 <object label="HoursLogged" erd_kind="attr" erd_name="HoursLogged" erd_attr="simple" id="WORKS_ON_TASK.HoursLogged">
                     <mxCell parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=10;strokeWidth=1;" vertex="1">
-                        <mxGeometry height="50" width="160" x="70" y="2230" as="geometry"/>
+                        <mxGeometry height="50" width="160" x="190" y="2296.85" as="geometry"/>
                     </mxCell>
                 </object>
                 <object label="ClientID" erd_kind="attr" erd_name="ClientID" erd_attr="key" id="CLIENT.ClientID">
@@ -733,22 +733,22 @@
                 </object>
                 <object label="&lt;u style=&quot;text-decoration: underline dashed;&quot;&gt;LineNumber&lt;/u&gt;" erd_kind="attr" erd_name="LineNumber" erd_attr="partial" id="PO_ITEM.LineNumber">
                     <mxCell parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=10;" vertex="1">
-                        <mxGeometry height="50" width="160" x="3052" y="1958.5" as="geometry"/>
+                        <mxGeometry height="50" width="160" x="3042" y="1861" as="geometry"/>
                     </mxCell>
                 </object>
                 <object label="QuantityOrdered" erd_kind="attr" erd_name="QuantityOrdered" erd_attr="simple" id="PO_ITEM.QuantityOrdered">
                     <mxCell parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=10;" vertex="1">
-                        <mxGeometry height="50" width="160" x="3408" y="1958.5" as="geometry"/>
+                        <mxGeometry height="50" width="160" x="3398" y="1861" as="geometry"/>
                     </mxCell>
                 </object>
                 <object label="AgreedUnitPrice" erd_kind="attr" erd_name="AgreedUnitPrice" erd_attr="simple" id="PO_ITEM.AgreedUnitPrice">
                     <mxCell parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=10;" vertex="1">
-                        <mxGeometry height="50" width="160" x="3408" y="2031.5" as="geometry"/>
+                        <mxGeometry height="50" width="160" x="3398" y="1934" as="geometry"/>
                     </mxCell>
                 </object>
                 <object label="ItemSubtotal" erd_kind="attr" erd_name="ItemSubtotal" erd_attr="derived" id="PO_ITEM.ItemSubtotal">
                     <mxCell parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=10;dashed=1;" vertex="1">
-                        <mxGeometry height="50" width="160" x="3052" y="2031.5" as="geometry"/>
+                        <mxGeometry height="50" width="160" x="3042" y="1934" as="geometry"/>
                     </mxCell>
                 </object>
                 <object label="CompanyName" erd_kind="attr" erd_name="CompanyName" erd_attr="simple" id="SUPPLIER.CompanyName">
@@ -783,32 +783,32 @@
                 </object>
                 <object label="MaterialID" erd_kind="attr" erd_name="MaterialID" erd_attr="key" id="MATERIAL.MaterialID">
                     <mxCell parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=10;fontStyle=4;" vertex="1">
-                        <mxGeometry height="50" width="160" x="3162.2" y="2237.3" as="geometry"/>
+                        <mxGeometry height="50" width="160" x="3040" y="2274" as="geometry"/>
                     </mxCell>
                 </object>
                 <object label="MaterialName" erd_kind="attr" erd_name="MaterialName" erd_attr="simple" id="MATERIAL.MaterialName">
                     <mxCell parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=10;" vertex="1">
-                        <mxGeometry height="50" width="160" x="3322.2000000000003" y="2206" as="geometry"/>
+                        <mxGeometry height="50" width="160" x="3098.0000000000005" y="2194" as="geometry"/>
                     </mxCell>
                 </object>
                 <object label="Category" erd_kind="attr" erd_name="Category" erd_attr="simple" id="MATERIAL.Category">
                     <mxCell parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=10;" vertex="1">
-                        <mxGeometry height="50" width="160" x="3453.6" y="2270" as="geometry"/>
+                        <mxGeometry height="50" width="160" x="3338" y="2234" as="geometry"/>
                     </mxCell>
                 </object>
                 <object label="StandardUnit" erd_kind="attr" erd_name="StandardUnit" erd_attr="simple" id="MATERIAL.StandardUnit">
                     <mxCell parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=10;" vertex="1">
-                        <mxGeometry height="50" width="160" x="3453.6" y="2360" as="geometry"/>
+                        <mxGeometry height="50" width="160" x="3338" y="2404" as="geometry"/>
                     </mxCell>
                 </object>
                 <object label="UnitPrice" erd_kind="attr" erd_name="UnitPrice" erd_attr="simple" id="MATERIAL.UnitPrice">
                     <mxCell parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=10;" vertex="1">
-                        <mxGeometry height="50" width="160" x="3350" y="2439.9999999999995" as="geometry"/>
+                        <mxGeometry height="50" width="160" x="3128" y="2463.9999999999995" as="geometry"/>
                     </mxCell>
                 </object>
                 <object label="MinStock" erd_kind="attr" erd_name="MinStock" erd_attr="simple" id="MATERIAL.MinStock">
                     <mxCell parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=10;" vertex="1">
-                        <mxGeometry height="50" width="160" x="3070" y="2395.3999999999996" as="geometry"/>
+                        <mxGeometry height="50" width="160" x="3040" y="2392.0999999999995" as="geometry"/>
                     </mxCell>
                 </object>
                 <object label="DeliveryCode" erd_kind="attr" erd_name="DeliveryCode" erd_attr="simple" id="DELIVERY_DISPATCH.DeliveryCode">
@@ -1524,8 +1524,10 @@
                     </mxCell>
                 </object>
                 <object label="" erd_kind="attr_link" id="al:MATERIAL.MaterialName">
-                    <mxCell edge="1" parent="1" source="MATERIAL" style="endArrow=none;html=1;rounded=0;" target="MATERIAL.MaterialName">
-                        <mxGeometry relative="1" as="geometry"/>
+                    <mxCell edge="1" parent="1" source="MATERIAL" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="MATERIAL.MaterialName">
+                        <mxGeometry relative="1" as="geometry">
+                            <mxPoint x="3357.3372847332157" y="2252.264765510379" as="targetPoint"/>
+                        </mxGeometry>
                     </mxCell>
                 </object>
                 <object label="" erd_kind="attr_link" id="al:MATERIAL.Category">
@@ -1906,8 +1908,8 @@
                     <mxCell edge="1" parent="1" source="TASK" style="endArrow=none;html=1;rounded=0;labelBackgroundColor=default;fontStyle=1;shape=link;strokeWidth=1;exitX=0;exitY=0.5;entryX=0.5;entryY=1;edgeStyle=orthogonalEdgeStyle;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" target="CONTAINS_TASKS">
                         <mxGeometry relative="1" x="-0.9481" as="geometry">
                             <Array as="points">
-                                <mxPoint x="430" y="3180"/>
-                                <mxPoint x="430" y="2105"/>
+                                <mxPoint x="490" y="3180"/>
+                                <mxPoint x="490" y="2105"/>
                                 <mxPoint x="260" y="2105"/>
                             </Array>
                         </mxGeometry>
@@ -2019,18 +2021,17 @@
                     <mxCell edge="1" parent="1" source="PO_ITEM" style="endArrow=none;html=1;rounded=0;labelBackgroundColor=default;fontStyle=1;shape=link;strokeWidth=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="ITEM_REFERENCES_MATERIAL">
                         <mxGeometry relative="1" x="-0.1636" as="geometry">
                             <Array as="points">
-                                <mxPoint x="3310" y="2070"/>
+                                <mxPoint x="3300" y="1972.5"/>
                             </Array>
                         </mxGeometry>
                     </mxCell>
                 </object>
                 <object label="1" erd_kind="link" erd_card="1" erd_total="0" erd_role="" id="e36">
-                    <mxCell edge="1" parent="1" source="MATERIAL" style="endArrow=none;html=1;rounded=0;labelBackgroundColor=default;fontStyle=1;strokeWidth=1;exitPerimeter=0;entryPerimeter=0;exitX=0;exitY=0.166667;entryX=0;entryY=0.5;" target="ITEM_REFERENCES_MATERIAL">
-                        <mxGeometry relative="1" x="-0.785" as="geometry">
-                            <Array as="points">
-                                <mxPoint x="3040" y="2330"/>
-                                <mxPoint x="3040" y="2144"/>
-                            </Array>
+                    <mxCell edge="1" parent="1" source="MATERIAL" style="endArrow=none;html=1;rounded=0;labelBackgroundColor=default;fontStyle=1;strokeWidth=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="ITEM_REFERENCES_MATERIAL">
+                        <mxGeometry relative="1" x="0.5668" as="geometry">
+                            <mxPoint as="offset"/>
+                            <Array as="points"/>
+                            <mxPoint x="3298" y="2198" as="targetPoint"/>
                         </mxGeometry>
                     </mxCell>
                 </object>
@@ -2211,9 +2212,9 @@
                 </object>
                 <object label="M" erd_kind="link" erd_card="M" erd_total="0" erd_role="" id="e55">
                     <mxCell edge="1" parent="1" source="MATERIAL" style="endArrow=none;html=1;rounded=0;labelBackgroundColor=default;fontStyle=1;strokeWidth=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" target="MATERIAL_USAGE">
-                        <mxGeometry relative="1" x="-0.9568" as="geometry">
+                        <mxGeometry relative="1" x="-0.9565" as="geometry">
                             <Array as="points">
-                                <mxPoint x="3330" y="3320"/>
+                                <mxPoint x="3310" y="3310"/>
                                 <mxPoint x="1680" y="3330"/>
                             </Array>
                         </mxGeometry>
