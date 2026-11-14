@@ -304,7 +304,7 @@ END //
 
 -- =============================================================================
 -- BUSINESS RULE 7: Single Active Project Limit for Site Directors
--- An employee can direct at most one project with Status = 'Active'.
+-- 
 -- =============================================================================
 DROP TRIGGER IF EXISTS TRG_CHECK_DIRECTOR_ACTIVE_PROJECT_INSERT //
 CREATE TRIGGER TRG_CHECK_DIRECTOR_ACTIVE_PROJECT_INSERT

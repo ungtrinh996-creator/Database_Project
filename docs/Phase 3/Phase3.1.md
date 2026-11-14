@@ -276,6 +276,7 @@ Each table is evaluated using a uniform template: Relational Schema, Functional 
 #### 16. Table: `EQUIPMENT_DEPLOYMENT` (2NF Partial Key Resolution)
 
 **1. Phase 2 Initial Design & Conflict Analysis:**
+
 * **Initial Relational Schema:** $\text{EQUIPMENT\_DEPLOYMENT}(\underline{\text{EquipmentID}}, \underline{\text{SiteID}}, \underline{\text{DeploymentStartDate}}, \text{DeploymentEndDate}, \text{HoursOperated}, \text{OperatorEmpID})$
 * **Initial Key & Functional Dependencies:**
   * Initial Composite Key: $\{\text{EquipmentID, SiteID, DeploymentStartDate}\}$
@@ -285,6 +286,7 @@ Each table is evaluated using a uniform template: Relational Schema, Functional 
   * **Conflict:** This constitutes a **Partial Key Dependency**, directly violating **2NF**. The initial key is non-minimal and redundant.
 
 **2. Conflict Resolution & Normalized Design (3NF Certified):**
+
 * **Resolution Strategy:** Remove $\text{SiteID}$ from the composite primary key and retain it as a non-prime foreign key referencing `PROJECT_SITE`. The primary key is minimized to strictly $\{\text{EquipmentID}, \text{DeploymentStartDate}\}$, eliminating the partial key dependency and restoring 2NF/3NF compliance without losing the job site relationship.
 * **Normalized Relational Schema:** $\text{EQUIPMENT\_DEPLOYMENT}(\underline{\text{EquipmentID}}, \underline{\text{DeploymentStartDate}}, \text{SiteID}, \text{DeploymentEndDate}, \text{HoursOperated}, \text{OperatorEmpID})$
 * **Normalized Candidate Keys & Attributes:**
@@ -404,6 +406,7 @@ Each table is evaluated using a uniform template: Relational Schema, Functional 
 #### 24. Table: `DELIVERY_DISPATCH` (3NF Transitive Dependency Resolution)
 
 **1. Phase 2 Initial Design & Conflict Analysis:**
+
 * **Initial Relational Schema:** $\text{DELIVERY\_DISPATCH}(\underline{\text{DeliveryCode}}, \text{SupplierID}, \text{MaterialID}, \text{SiteID}, \text{DeliveryDate}, \text{DeliveredQuantity}, \text{ReceivedByEmpID}, \text{PO\_ID})$
 * **Initial Key & Functional Dependencies:**
   * Initial Candidate Key: $\{\text{DeliveryCode}\}$
@@ -417,6 +420,7 @@ Each table is evaluated using a uniform template: Relational Schema, Functional 
   * **Business Anomalies:** Data redundancy (vendor ID duplicated across PO and delivery records); update anomaly (reassigning a PO vendor creates inconsistency in dispatch history).
 
 **2. Conflict Resolution & Normalized Design (3NF Certified):**
+
 * **Resolution Strategy:** Eliminate $\text{SupplierID}$ from `DELIVERY_DISPATCH`. Because $\text{PO\_ID} \to \text{SupplierID}$ is fully maintained in `PURCHASE_ORDER`, vendor information is retrieved losslessly by joining on the foreign key $\text{PO\_ID}$, completely resolving the transitive dependency and eliminating update anomalies.
 * **Normalized Relational Schema:** $\text{DELIVERY\_DISPATCH}(\underline{\text{DeliveryCode}}, \text{MaterialID}, \text{SiteID}, \text{DeliveryDate}, \text{DeliveredQuantity}, \text{ReceivedByEmpID}, \text{PO\_ID})$
 * **Normalized Candidate Keys & Attributes:**
